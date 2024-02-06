@@ -4,7 +4,9 @@ Projeto pessoal criado para ajudar a fixar o conteúdo aprendido nas videoaulas 
 
 # Imagens da aplicação:
 
-![image](https://github.com/IGDSCI/SIMULADOR-TELA-CADASTRO/assets/114839208/06b7d4f4-def1-4934-bcf9-6ee2ae5fd2b2) ![image](https://github.com/IGDSCI/SIMULADOR-TELA-CADASTRO/assets/114839208/313463b9-821f-4f2e-8ca6-8e7277ab1382)
+![image](https://github.com/IGDSCI/SIMULADOR-TELA-CADASTRO/assets/114839208/06b7d4f4-def1-4934-bcf9-6ee2ae5fd2b2) 
+![image](https://github.com/IGDSCI/SIMULADOR-TELA-CADASTRO/assets/114839208/f0921d28-2a51-4aa6-bedf-3a166dd22c16)
+
 
 
 
