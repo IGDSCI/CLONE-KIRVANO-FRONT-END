@@ -1,39 +1,31 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
-import 'package:tela_cadastro/login.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+class LoginStl extends StatelessWidget {
+  const LoginStl({super.key});
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const MyHomePage(),
-      routes: {
-        '/login': (context) => LoginStf(),
-      },
+      home: LoginStf(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
+class LoginStf extends StatefulWidget {
+  const LoginStf({super.key});
+
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<LoginStf> createState() => _LoginStfState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _LoginStfState extends State<LoginStf> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Container(
           width: 380,
-          height: 800,
+          height: 420,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(12)), 
             border: Border.all(
@@ -81,31 +73,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    label: Text('Nome e Sobrenome'),
-                    ),
-                ),
-              ),
-          
-              SizedBox(height: 15,),
-          
-              SizedBox(
-                width: 280,
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
                     label: Text('E-mail'),
-                    ),
-                ),
-              ),
-          
-              SizedBox(height: 15,),
-          
-              SizedBox(
-                width: 280,
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    label: Text('Telefone'),
                     ),
                 ),
               ),
@@ -122,82 +90,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                 ),
               ),
-          
-              SizedBox(height: 15,),
-          
-              SizedBox(
-                width: 280,
-                child: TextField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    label: Text('Confirmar senha'),
-                    ),
-                ),
-              ),
-
-              SizedBox(height: 20,),
-
-              Container(
-                width: 280,
-                height: 160,
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 243, 240, 240),
-                  borderRadius: BorderRadius.all(Radius.circular(12)), 
-                  border: Border.all(
-                    width: 1,
-                    color: Color.fromARGB(255, 218, 215, 215),
-                )),
-                
-                child: Column(children: [
-                  Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.only(top: 8),
-                      child: Text('  Sua senha deve conter:'),
-                    )
-                  ],),
-                  
-                  Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: Icon(Icons.clear, color: Colors.red,),
-                    ),
-                    Text('Pelo menos 8 caracteres'),
-                  ],),
-
-                  Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: Icon(Icons.clear, color: Colors.red,),
-                    ),
-                    Text('Pelo menos 1 caractere especial'),
-                  ],),
-
-                  Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: Icon(Icons.clear, color: Colors.red,),
-                    ),
-                    Text('Pelo menos 1 letra minúscula'),
-                  ],),
-
-                  Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: Icon(Icons.clear, color: Colors.red,),
-                    ),
-                    Text('Pelo menos 1 letra maiúscula'),
-                  ],),
-
-                  Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 8),
-                      child: Icon(Icons.clear, color: Colors.red,),
-                    ),
-                    Text('As senhas digitadas conferem'),
-                  ],)
-                ]),
-              ),
 
               SizedBox(height: 30,),
 
@@ -208,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 }, style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue
                     ), child: Text(
-                  'Criar conta grátis',
+                  'Acessar minha conta',
                   style: TextStyle(color: Colors.white, fontSize: 16),
                   ),),
               )
