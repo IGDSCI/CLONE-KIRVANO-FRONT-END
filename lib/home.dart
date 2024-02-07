@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:fl_chart/fl_chart.dart';
 
 class HomePageStl extends StatelessWidget {
   const HomePageStl({super.key});
@@ -268,9 +269,63 @@ class _HomePageStfState extends State<HomePageStf> {
                   ),
                 ]),
               ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 25, top: 10),
+              child: Container(
+                height: 100,
+                width: 300,
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    width: 1,
+                    color: const Color.fromARGB(255, 190, 188, 188),
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(12))
+                  ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      height: 30,
+                      width: 110,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 1,
+                          color: const Color.fromARGB(255, 190, 188, 188),
+                        ),
+                        borderRadius: BorderRadius.all(Radius.circular(12))
+                        ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.emoji_events),
+                          Text(
+                            'Nível 1',
+                            style: TextStyle(
+                              fontSize: 18
+                              ),
+                            ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.only(top: 16, left: 8, right: 8),
+                    child: LinearProgressIndicator(
+                      value: 0,
+                      backgroundColor: Colors.grey[300],
+                      valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+                    ),
+                  ),
+                ]),
+              ),
             )
-          ],)
-        ],)  
+          ],),
+        ],),
       ]),
     );
   }
