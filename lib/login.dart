@@ -97,6 +97,7 @@ class _LoginStfState extends State<LoginStf> {
                 width: 280,
                 height: 40,
                 child: ElevatedButton(onPressed: (){
+                  Navigator.of(context).pushReplacementNamed('/home');
                 }, style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue
                     ), child: Text(

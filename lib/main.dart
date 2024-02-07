@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:tela_cadastro/home.dart';
 import 'package:tela_cadastro/login.dart';
 
 void main() {
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       home: const MyHomePage(),
       routes: {
         '/login': (context) => LoginStf(),
+        '/home': (context) => HomePageStl(),
       },
     );
   }
@@ -205,6 +207,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 width: 280,
                 height: 40,
                 child: ElevatedButton(onPressed: (){
+                  Navigator.of(context).pushReplacementNamed('/login');
                 }, style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue
                     ), child: Text(
