@@ -154,7 +154,7 @@ class _HomePageStfState extends State<HomePageStf> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(top: 45, left: 180),
+            padding: const EdgeInsets.only(top: 45, left: 182),
             child: Text(
               'Resumo',
               style: TextStyle(fontSize: 20),
@@ -425,7 +425,6 @@ class _HomePageStfState extends State<HomePageStf> {
                                   FlSpot(8, 2),
                                   FlSpot(9, 3),
                                   FlSpot(10, 1),
-                                  
                                 ],
                                 isCurved: true,
                                 color: Colors.blue,
@@ -441,6 +440,198 @@ class _HomePageStfState extends State<HomePageStf> {
               ),
             ),
           ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 30, left: 185),
+                child: Container(
+                  height: 100,
+                  width: 350,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12)
+                      ),
+                    border: Border.all(
+                      color: Color.fromARGB(255, 190, 188, 188),
+                      width: 1,
+                    )
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Row(children: [
+                          Icon(Icons.payment),
+                          Text('  CONVERSÃO DE PAGAMENTO')
+                        ]),
+                    
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15, top: 10),
+                          child: Row(children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color.fromRGBO(217, 218, 219, 0.612),
+                                border: Border.all(
+                                  width: 5,
+                                  color: Color.fromRGBO(217, 218, 219, 0.612),
+                                )
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '0%', 
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10,),
+                            Column(crossAxisAlignment: CrossAxisAlignment.start,children: [
+                              Text('Cartão'),
+                              Text('0')
+                            ],),
+                            SizedBox(width: 30),
+                            Container(
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color.fromRGBO(217, 218, 219, 0.612),
+                                border: Border.all(
+                                  width: 5,
+                                  color: Color.fromRGBO(217, 218, 219, 0.612),
+                                )
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '0%', 
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10,),
+                            Column(crossAxisAlignment: CrossAxisAlignment.start,children: [
+                              Text('PIX'),
+                              Text('0')
+                            ],),
+                            SizedBox(width: 30),
+                            Container(
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: Color.fromRGBO(217, 218, 219, 0.612),
+                                border: Border.all(
+                                  width: 5,
+                                  color: Color.fromRGBO(217, 218, 219, 0.612),
+                                )
+                              ),
+                              child: Center(
+                                child: Text(
+                                  '0%', 
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10,),
+                            Column(crossAxisAlignment: CrossAxisAlignment.start,children: [
+                              Text('Boleto'),
+                              Text('0')
+                            ],)
+                          ],),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(top: 30, left: 112),
+                child: Container(
+                  height: 100,
+                  width: 350,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12)
+                      ),
+                    border: Border.all(
+                      color: Color.fromARGB(255, 190, 188, 188),
+                      width: 1,
+                    )
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Row(children: [
+                          Icon(Icons.payment),
+                          Text('  STATUS DA CONTA')
+                        ]),
+                    
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15, top: 10),
+                          child: Row(children: [
+                            Expanded(
+                              child: Text(
+                                'Em breve você terá acesso a um informe instantâneo da saúde do seu negócio.',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                ),
+                            )
+                          ],),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.only(top: 30, left: 112),
+                child: Container(
+                  height: 100,
+                  width: 350,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(12)
+                      ),
+                    border: Border.all(
+                      color: Color.fromARGB(255, 190, 188, 188),
+                      width: 1,
+                    )
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Row(children: [
+                          Icon(Icons.payment),
+                          Text('  CONVERSÃO DE CHECKOUT')
+                        ]),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 15, top: 10),
+                          child: Row(children: [
+                            Expanded(
+                              child: Text(
+                                'Em breve você terá acesso a um funil otimizado com a conversão dos acessos ao checkout.',
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                                ),
+                            )
+                          ],),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              )
+            ],
+          )
         ],),
       ]),
     );
