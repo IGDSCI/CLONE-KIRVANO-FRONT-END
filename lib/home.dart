@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
-
 class HomePageStl extends StatelessWidget {
   const HomePageStl({super.key});
 
@@ -325,6 +324,123 @@ class _HomePageStfState extends State<HomePageStf> {
               ),
             )
           ],),
+
+
+          Padding(
+            padding: const EdgeInsets.only(left: 185, top: 30),
+            child: Container(
+              height: 450,
+              width: 1275,
+              decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 1,
+                      color: const Color.fromARGB(255, 190, 188, 188),
+                    ),
+                    borderRadius: BorderRadius.all(Radius.circular(12))
+                    ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 50, top: 30),
+                    child: Row(children: [
+                      Padding(
+                        padding: const EdgeInsets.only(right: 450),
+                        child: Text(
+                          'GRÁFICO DE FATURAMENTO',
+                          style: TextStyle(fontSize: 18),
+                          ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 35),
+                        child: Text(
+                          'VENDAS R\$ 0,00',
+                          style: TextStyle(fontSize: 18),
+                          ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(color: Color.fromARGB(255, 190, 188, 188)),
+                              borderRadius: BorderRadius.circular(8.0),)),
+                          onPressed: (){}, 
+                        child: Text(
+                          '7 dias',
+                          style: TextStyle(color: Colors.black),
+                          )),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(color: Color.fromARGB(255, 190, 188, 188)),
+                              borderRadius: BorderRadius.circular(8.0),)),
+                          onPressed: (){}, 
+                        child: Text(
+                          '15 dias',
+                          style: TextStyle(color: Colors.black),
+                          )),
+                      ),
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(color: Color.fromARGB(255, 190, 188, 188)),
+                              borderRadius: BorderRadius.circular(8.0),)),
+                        onPressed: (){}, 
+                      child: Text(
+                        '30 dias',
+                        style: TextStyle(color: Colors.black),
+                        )),
+                    ],),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 60),
+                    child: Container(
+                        width: 1200,
+                        height: 300,
+                        child: LineChart(
+                          LineChartData(
+                            minX: 0,
+                            maxX: 10,
+                            minY: 0,
+                            maxY: 10,
+                            titlesData: FlTitlesData(
+                              rightTitles: AxisTitles(),
+                              topTitles: AxisTitles(),
+                              show: true),
+                            lineBarsData: [
+                              LineChartBarData(
+                                spots: [
+                                  FlSpot(0, 3),
+                                  FlSpot(1, 3),
+                                  FlSpot(2, 5),
+                                  FlSpot(3, 7),
+                                  FlSpot(4, 2),
+                                  FlSpot(5, 3),
+                                  FlSpot(6, 1),
+                                  FlSpot(7, 3),
+                                  FlSpot(8, 2),
+                                  FlSpot(9, 3),
+                                  FlSpot(10, 1),
+                                  
+                                ],
+                                isCurved: true,
+                                color: Colors.blue,
+                                dotData: FlDotData(show: false),
+                                belowBarData: BarAreaData(show: false),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],),
       ]),
     );
