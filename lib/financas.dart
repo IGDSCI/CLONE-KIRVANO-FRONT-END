@@ -51,7 +51,7 @@ class _FinancasStfState extends State<FinancasStf> {
               
               Padding(
                 padding: const EdgeInsets.only(left: 5, bottom: 25, top: 20),
-                child: Container(
+                child: SizedBox(
                   width: 200,
                   height: 40,
                   child: ElevatedButton(
@@ -96,7 +96,7 @@ class _FinancasStfState extends State<FinancasStf> {
 
               Padding(
                 padding: const EdgeInsets.only(left: 5, bottom: 25),
-                child: Container(
+                child: SizedBox(
                   width: 200,
                   height: 40,
                   child: ElevatedButton(
@@ -141,7 +141,7 @@ class _FinancasStfState extends State<FinancasStf> {
 
               Padding(
                 padding: const EdgeInsets.only(left: 5, bottom: 25),
-                child: Container(
+                child: SizedBox(
                   width: 200,
                   height: 40,
                   child: ElevatedButton(
@@ -186,7 +186,7 @@ class _FinancasStfState extends State<FinancasStf> {
 
               Padding(
                 padding: const EdgeInsets.only(left: 5, bottom: 25),
-                child: Container(
+                child: SizedBox(
                   width: 200,
                   height: 40,
                   child: ElevatedButton(
@@ -231,7 +231,7 @@ class _FinancasStfState extends State<FinancasStf> {
 
               Padding(
                 padding: const EdgeInsets.only(left: 5, bottom: 25),
-                child: Container(
+                child: SizedBox(
                   width: 200,
                   height: 40,
                   child: ElevatedButton(
@@ -276,7 +276,7 @@ class _FinancasStfState extends State<FinancasStf> {
 
               Padding(
                 padding: const EdgeInsets.only(left: 5, bottom: 25),
-                child: Container(
+                child: SizedBox(
                   width: 200,
                   height: 40,
                   child: ElevatedButton(
@@ -321,7 +321,7 @@ class _FinancasStfState extends State<FinancasStf> {
 
               Padding(
                 padding: const EdgeInsets.only(left: 5, bottom: 25),
-                child: Container(
+                child: SizedBox(
                   width: 200,
                   height: 40,
                   child: ElevatedButton(
@@ -366,7 +366,7 @@ class _FinancasStfState extends State<FinancasStf> {
 
               Padding(
                 padding: const EdgeInsets.only(left: 5, bottom: 25, top: 230),
-                child: Container(
+                child: SizedBox(
                   width: 200,
                   height: 40,
                   child: ElevatedButton(
@@ -409,7 +409,7 @@ class _FinancasStfState extends State<FinancasStf> {
 
               Padding(
                 padding: const EdgeInsets.only(left: 5),
-                child: Container(
+                child: SizedBox(
                   width: 200,
                   height: 40,
                   child: ElevatedButton(
