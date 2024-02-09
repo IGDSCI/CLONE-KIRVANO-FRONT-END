@@ -1,38 +1,38 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:tela_cadastro/dashboard.dart';
-import 'package:tela_cadastro/tela_cadastro.dart';
+import 'package:tela_cadastro/login.dart';
 
-class LoginStl extends StatelessWidget {
-  const LoginStl({super.key});
+class TelaCadastroStl extends StatelessWidget {
+  const TelaCadastroStl({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: LoginStf(),
+      home: TelaCadastroStf(),
       routes: {
         '/login': (context) => LoginStl(),
         '/telaCadastro': (context) => TelaCadastroStl(),
-        '/dashBoard': (context) => DashBoardStl(),
       },
     );
   }
 }
 
-class LoginStf extends StatefulWidget {
-  const LoginStf({super.key});
+
+class TelaCadastroStf extends StatefulWidget {
+  const TelaCadastroStf({super.key});
   @override
-  State<LoginStf> createState() => _LoginStfState();
+  State<TelaCadastroStf> createState() => _TelaCadastroStfState();
 }
 
-class _LoginStfState extends State<LoginStf> {
+
+class _TelaCadastroStfState extends State<TelaCadastroStf> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Container(
           width: 380,
-          height: 420,
+          height: 800,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(12)),
             border: Border.all(
@@ -40,6 +40,7 @@ class _LoginStfState extends State<LoginStf> {
               color: const Color.fromARGB(255, 190, 188, 188),
             ),
           ),
+
           child: Column(
             children: [
               SizedBox(height: 40),
@@ -49,27 +50,27 @@ class _LoginStfState extends State<LoginStf> {
               SizedBox(height: 20),
 
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center, 
                 children: [
                   ElevatedButton(
-                    onPressed: () {
+                    onPressed: (){
                       Navigator.of(context).pushReplacementNamed('/login');
-                    },
+                    }, 
                     child: Text(
                       'Login',
                       style: TextStyle(color: Colors.black),
+                      )
                     ),
-                  ),
 
                   ElevatedButton(
-                    onPressed: () {
+                    onPressed: (){
                       Navigator.of(context).pushReplacementNamed('/telaCadastro');
-                    },
+                    }, 
                     child: Text(
                       'Nova Conta',
                       style: TextStyle(color: Colors.black),
+                      )
                     ),
-                  ),
                 ],
               ),
               SizedBox(height: 20),
@@ -79,8 +80,30 @@ class _LoginStfState extends State<LoginStf> {
                 child: TextField(
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
+                    label: Text('Nome e Sobrenome'),
+                    ),
+                ),
+              ),
+              SizedBox(height: 15),
+
+              SizedBox(
+                width: 280,
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
                     label: Text('E-mail'),
-                  ),
+                    ),
+                ),
+              ),
+              SizedBox(height: 15),
+
+              SizedBox(
+                width: 280,
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    label: Text('Telefone'),
+                    ),
                 ),
               ),
               SizedBox(height: 15),
@@ -92,8 +115,81 @@ class _LoginStfState extends State<LoginStf> {
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
                     label: Text('Senha'),
-                  ),
+                    ),
                 ),
+              ),
+              SizedBox(height: 15),
+
+              SizedBox(
+                width: 280,
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    label: Text('Confirmar senha'),
+                    ),
+                ),
+              ),
+              SizedBox(height: 20),
+
+              Container(
+                width: 280,
+                height: 160,
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 243, 240, 240),
+                  borderRadius: BorderRadius.all(Radius.circular(12)), 
+                  border: Border.all(
+                    width: 1,
+                    color: Color.fromARGB(255, 218, 215, 215),
+                )),
+                child: Column(children: [
+                  Row(children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 8),
+                      child: Text('  Sua senha deve conter:'),
+                    )
+                  ],),
+                  
+                  Row(children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Icon(Icons.clear, color: Colors.red,),
+                    ),
+                    Text('Pelo menos 8 caracteres'),
+                  ],),
+
+                  Row(children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Icon(Icons.clear, color: Colors.red,),
+                    ),
+                    Text('Pelo menos 1 caractere especial'),
+                  ],),
+
+                  Row(children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Icon(Icons.clear, color: Colors.red,),
+                    ),
+                    Text('Pelo menos 1 letra minúscula'),
+                  ],),
+
+                  Row(children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Icon(Icons.clear, color: Colors.red,),
+                    ),
+                    Text('Pelo menos 1 letra maiúscula'),
+                  ],),
+
+                  Row(children: [
+                    Padding(
+                      padding: const EdgeInsets.only(left: 8),
+                      child: Icon(Icons.clear, color: Colors.red,),
+                    ),
+                    Text('As senhas digitadas conferem'),
+                  ],)
+                ]),
               ),
               SizedBox(height: 30),
 
@@ -101,22 +197,22 @@ class _LoginStfState extends State<LoginStf> {
                 width: 280,
                 height: 40,
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).pushNamed('/dashBoard');
+                  onPressed: (){
+                    Navigator.of(context).pushReplacementNamed('/login');
                   },
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue,
-                  ),
+                    backgroundColor: Colors.blue
+                  ), 
                   child: Text(
-                    'Acessar minha conta',
+                    'Criar conta grátis',
                     style: TextStyle(color: Colors.white, fontSize: 16),
                   ),
                 ),
-              ),
+              )
             ],
           ),
         ),
-      ),
+      )
     );
   }
 }
