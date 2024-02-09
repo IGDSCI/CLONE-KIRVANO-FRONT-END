@@ -10,7 +10,6 @@ import 'package:tela_cadastro/vendas.dart';
 
 class IndiqueEGanheStl extends StatelessWidget {
   const IndiqueEGanheStl({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

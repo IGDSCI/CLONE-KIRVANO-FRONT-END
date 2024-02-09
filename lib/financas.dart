@@ -10,7 +10,6 @@ import 'package:tela_cadastro/vendas.dart';
 
 class FinancasStl extends StatelessWidget {
   const FinancasStl({super.key});
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
