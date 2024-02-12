@@ -451,6 +451,324 @@ class _FinancasStfState extends State<FinancasStf> {
             ],
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.only(left: 180, top: 56),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+            Text(
+              'Finanças',
+              style: TextStyle(fontSize: 26),
+              ),
+
+            Padding(
+              padding: const EdgeInsets.only(top: 45),
+              child: Text(
+                'Resumo',
+                style: TextStyle(fontSize: 20),
+                ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
+              child: Row(children: [
+                Container(
+                      height: 100,
+                      width: 300,
+                      decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 1,
+                            color: const Color.fromARGB(255, 190, 188, 188),
+                          ),
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                'Saldo disponível',
+                                style: TextStyle(fontSize: 18),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                'R\$ 0,00',
+                                style: TextStyle(
+                                  fontSize: 22,
+                                  color: Colors.green,
+                                ),
+                              ),
+                            ),
+                          ]),
+                    ),
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 25),
+                  child: Container(
+                        height: 100,
+                        width: 300,
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 1,
+                              color: const Color.fromARGB(255, 190, 188, 188),
+                            ),
+                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'Pendente',
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'R\$ 0,00',
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                    color: Colors.orange,
+                                  ),
+                                ),
+                              ),
+                            ]),
+                      ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 25),
+                  child: Container(
+                        height: 100,
+                        width: 300,
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 1,
+                              color: const Color.fromARGB(255, 190, 188, 188),
+                            ),
+                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'Reservado',
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'R\$ 0,00',
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ),
+                            ]),
+                      ),
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 25),
+                  child: Container(
+                        height: 100,
+                        width: 300,
+                        decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 1,
+                              color: const Color.fromARGB(255, 190, 188, 188),
+                            ),
+                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                        child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'Total',
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  'R\$ 0,00',
+                                  style: TextStyle(
+                                    fontSize: 22,
+                                    color: Colors.blue,
+                                  ),
+                                ),
+                              ),
+                            ]),
+                      ),
+                ),
+              ],),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 30),
+              child: Row(crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                Container(
+                      height: 180,
+                      width: 800,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 243, 240, 240),
+                          border: Border.all(
+                            width: 1,
+                            color: const Color.fromARGB(255, 190, 188, 188),
+                          ),
+                          borderRadius: BorderRadius.all(Radius.circular(12))),
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text(
+                                'Solicite um saque',
+                                style: TextStyle(fontSize: 22),
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: SizedBox(
+                                width: 700,
+                                child: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Text(
+                                        'Para solicitar um saque, é necessário o valor mínimo de R\$5,00 e verificar sua identidade.',
+                                        maxLines: 2,
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                    ),
+              
+                                    Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Text('Valor'),
+                                        SizedBox(
+                                          width: 150,
+                                          height: 45,
+                                          child: TextField(
+                                            decoration: InputDecoration(
+                                              label: Text(
+                                                '0,00',
+                                                style: TextStyle(fontSize: 20),
+                                                ),
+                                              border: OutlineInputBorder(),
+                                              prefixIcon: Row(
+                                                mainAxisSize: MainAxisSize.min,
+                                                children: [
+                                                  Text(
+                                                    'R\$',
+                                                    style: TextStyle(fontSize: 20),
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 18, left: 10),
+                                      child: SizedBox(
+                                        width: 150,
+                                        height: 45,
+                                        child: ElevatedButton(
+                                          style: ElevatedButton.styleFrom(
+                                            backgroundColor: Colors.black,
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(8.0),
+                                            )),
+                                          onPressed: (){}, 
+                                          child: Text(
+                                            'Solicitar saque',
+                                            style: TextStyle(color: Colors.white),
+                                          )
+                                        )
+                                      ),
+                                    )
+                                  ],
+                                ),
+                              ),
+                            ),
+                          ]),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 75),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 300,
+                            width: 400,
+                            decoration: BoxDecoration(
+                              border: Border.all(
+                                width: 1,
+                                color: const Color.fromARGB(255, 190, 188, 188),
+                              ),
+                              borderRadius: BorderRadius.all(Radius.circular(12)),
+                            ),
+                            child: Column(
+                              children: [
+                                Align(
+                                  alignment: Alignment.bottomLeft,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      'Extrato',
+                                      style: TextStyle(fontSize: 18),
+                                    ),
+                                  ),
+                                ),
+                                Align(
+                                  alignment: Alignment.center,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Image.network(
+                                      'https://cdn-icons-png.flaticon.com/512/4021/4021708.png',
+                                      width: 140,
+                                    ),
+                                  ),
+                                ),
+                                Align(
+                                  alignment: Alignment.center,
+                                  child: Column(
+                                    children: [
+                                      Text('Não há registros...'),
+                                      Text('Quando surgirem, você poderá visualizá-los por aqui.'),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+
+
+              ],),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 230),
+              child: Column(children: [
+                Image.network('https://cdn-icons-png.flaticon.com/512/6802/6802306.png', width: 140,),
+                Text('Não há registros...'),
+                Text('Quando surgirem, você poderá gerenciá-los por aqui.')
+              ],),
+            )
+          ],),
+        )
       ]),
     );
   }
