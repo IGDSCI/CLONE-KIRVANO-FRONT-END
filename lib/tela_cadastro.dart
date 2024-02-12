@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:tela_cadastro/login.dart';
+import 'package:tela_cadastro/vendas.dart';
 
 class TelaCadastroStl extends StatelessWidget {
   const TelaCadastroStl({super.key});
@@ -9,9 +10,11 @@ class TelaCadastroStl extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: TelaCadastroStf(),
+      initialRoute: '/vendas',
       routes: {
         '/login': (context) => LoginStl(),
         '/telaCadastro': (context) => TelaCadastroStl(),
+        '/vendas': (context) => VendasStl(),
       },
     );
   }

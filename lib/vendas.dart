@@ -451,6 +451,114 @@ class _VendasStfState extends State<VendasStf> {
             ],
           ),
         ),
+
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 180, top: 56),
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(right: 6),
+                    child: Text(
+                      'Vendas',
+                      style: TextStyle(fontSize: 26),
+                      ),
+                  ),
+              
+                  Container(
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color:
+                            Color.fromRGBO(217, 218, 219, 0.612),
+                        border: Border.all(
+                          width: 10,
+                          color: Color.fromRGBO(
+                              217, 218, 219, 0.612),
+                        )),
+                    child: Center(
+                      child: Text(
+                        '0',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 180, top: 20),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    width: 1200,
+                    height: 100,
+                    child: TextField(decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      label: Text('Buscar por CPF, transação ou nome...'),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 56,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 15),
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue,
+                            shape: RoundedRectangleBorder(
+                          side: BorderSide(
+                              color:
+                                  Color.fromARGB(255, 190, 188, 188)),
+                          borderRadius: BorderRadius.circular(8.0),
+                        )),
+                        onPressed: () {},
+                        child: Row(
+                          children: [
+                            Icon(
+                              Icons.format_list_bulleted,
+                              color: Colors.white,
+                              ),
+                            Text(
+                              'Filtrar',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ],
+                        )),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 700, top: 50),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Image.network('https://cdn-icons-png.flaticon.com/512/3091/3091221.png', height: 100, width: 100,),
+              
+                  Padding(
+                    padding: const EdgeInsets.all(14),
+                    child: Text(
+                      'Não há registros...',
+                      style: TextStyle(fontSize: 18),
+                      ),
+                  ),
+              
+                  Text('Aqui serão listadas suas vendas'),
+                ],
+              ),
+            )
+          ],
+        ),
       ]),
     );
   }
