@@ -451,6 +451,158 @@ class _ProdutosStfState extends State<ProdutosStf> {
             ],
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.only(left: 180, top: 56),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+            Row(children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 6),
+                child: Text(
+                  'Produtos',
+                  style: TextStyle(
+                    fontSize: 26
+                    ),
+                  ),
+              ),
+          
+              Container(
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color:
+                          Color.fromRGBO(217, 218, 219, 0.612),
+                      border: Border.all(
+                        width: 10,
+                        color: Color.fromRGBO(
+                            217, 218, 219, 0.612),
+                      )),
+                  child: Center(
+                    child: Text(
+                      '0',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ),
+            ],),
+           Padding(
+             padding: const EdgeInsets.only(top: 20),
+             child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(
+                    height: 50,
+                    width: 700,
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Buscar',
+                        prefixIcon: Icon(Icons.search),
+                      ),
+                    ),
+                  ),
+                       
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30),
+                    child: SizedBox(
+                      height: 46,
+                      child: ElevatedButton(
+                        onPressed: (){}, 
+                        child: Text(
+                          'Autorais',
+                          style: TextStyle(color: Colors.black),
+                          )
+                      )
+                    ),
+                  ),
+                       
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30),
+                    child: SizedBox(
+                      height: 46,
+                      child: ElevatedButton(
+                        onPressed: (){}, 
+                        child: Text(
+                          'Afiliados',
+                          style: TextStyle(color: Colors.black),
+                          )
+                      ),
+                    ),
+                  ),
+                       
+                  Padding(
+                    padding: const EdgeInsets.only(left: 30),
+                    child: SizedBox(
+                      height: 46,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                            ),
+                        ),
+                        onPressed: (){}, 
+                        child: Icon(
+                          Icons.format_list_bulleted,
+                          color: Colors.black,
+                          )
+                      ),
+                    ),
+                  ),
+                       
+                  Padding(
+                    padding: const EdgeInsets.only(left: 15),
+                    child: SizedBox(
+                      height: 46,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.blue,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8.0),
+                            ),
+                        ),
+                        onPressed: (){}, 
+                        child: Row(children: [
+                          Icon(
+                            Icons.add_box_outlined,
+                            color: Colors.white,
+                            ),
+                          Text(
+                            'Novo produto',
+                            style: TextStyle(color: Colors.white),
+                            )
+                        ],)
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+           ),
+           Padding(
+             padding: const EdgeInsets.only(left: 420, top: 100),
+             child: Column(
+               children: [
+                 SizedBox(
+                  height: 130,
+                  child: Image.network('https://cdn-icons-png.flaticon.com/512/2652/2652218.png')),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 20),
+                    child: Text(
+                      'Crie um produto e começe a vender agora',
+                      style: TextStyle(fontSize: 18),
+                      ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 15),
+                    child: Text('Aqui serão listados todos os seus produtos.'),
+                  ),
+               ],
+             ),
+           )
+          ],),
+        )
       ]),
     );
   }

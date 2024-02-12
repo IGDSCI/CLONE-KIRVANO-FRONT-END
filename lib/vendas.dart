@@ -503,6 +503,7 @@ class _VendasStfState extends State<VendasStf> {
                     child: TextField(decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       label: Text('Buscar por CPF, transação ou nome...'),
+                      prefixIcon: Icon(Icons.search),
                       ),
                     ),
                   ),
