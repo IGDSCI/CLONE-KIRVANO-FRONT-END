@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:tela_cadastro/extensoes.dart';
+import 'package:tela_cadastro/indique_e_ganhe.dart';
 import 'package:tela_cadastro/login.dart';
 import 'package:tela_cadastro/vendas.dart';
 
@@ -11,12 +12,12 @@ class TelaCadastroStl extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: TelaCadastroStf(),
-      initialRoute: '/extensoes',
+      initialRoute: '/indique_e_ganhe',
       routes: {
         '/login': (context) => LoginStl(),
         '/telaCadastro': (context) => TelaCadastroStl(),
         '/vendas': (context) => VendasStl(),
-        '/extensoes': (context) => ExtensoesStl(),
+        '/indique_e_ganhe': (context) => IndiqueEGanheStl(),
       },
     );
   }
