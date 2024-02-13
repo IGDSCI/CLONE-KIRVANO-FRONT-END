@@ -451,6 +451,62 @@ class _ComprasStfState extends State<ComprasStf> {
             ],
           ),
         ),
+
+        Padding(
+          padding: const EdgeInsets.only(left: 180, top: 56),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+            Row(children: [
+              Padding(
+                padding: const EdgeInsets.only(right: 6),
+                child: Text(
+                  'Compras',
+                  style: TextStyle(fontSize: 26),
+                ),
+              ),
+
+              Container(
+                  decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color:
+                          Color.fromRGBO(217, 218, 219, 0.612),
+                      border: Border.all(
+                        width: 10,
+                        color: Color.fromRGBO(
+                            217, 218, 219, 0.612),
+                      )),
+                  child: Center(
+                    child: Text(
+                      '0',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ),
+                ),
+            ],),
+            Padding(
+              padding: const EdgeInsets.only(left: 400, top: 250),
+              child: Column(children: [
+                Image.network(
+                  'https://cdn-icons-png.flaticon.com/512/3260/3260234.png', 
+                  height: 130,
+                ),
+              
+                Text(
+                  'Nenhuma compra realizada até o momento',
+                  style: TextStyle(fontSize: 22),
+                  ),
+              
+                Text(
+                  'Aqui serão listadas suas compras.'
+                  )
+              ],),
+            )
+          ],),
+        )
       ]),
     );
   }
