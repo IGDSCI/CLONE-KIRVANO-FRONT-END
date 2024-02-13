@@ -451,38 +451,77 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                 'Extensões',
                 style: TextStyle(fontSize: 26),
               ),
-              Row(
-                children: [
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8.0),
-                      )),
-                      onPressed: () {},
-                      child: Text('Conectados')),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8.0),
-                      )),
-                      onPressed: () {},
-                      child: Text('Desconectados')),
-                  SizedBox(
-                      width: 400,
-                      child: TextField(
-                        decoration: InputDecoration(
-                            border: OutlineInputBorder(),
-                            label: Text('Buscar')),
-                      )),
-                  ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Colors.blue,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8.0),
+              Padding(
+                padding: const EdgeInsets.only(top: 30),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              side: BorderSide(width: 1, color: Colors.grey),
+                              borderRadius: BorderRadius.circular(8.0),
+                            )),
+                        onPressed: () {},
+                        child: Text(
+                          'Conectados',
+                          style: TextStyle(color: Colors.black),
+                        )),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 10),
+                      child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(
+                                side: BorderSide(width: 1, color: Colors.grey),
+                                borderRadius: BorderRadius.circular(8.0),
+                              )),
+                          onPressed: () {},
+                          child: Text(
+                            'Desconectados',
+                            style: TextStyle(color: Colors.black),
                           )),
-                      onPressed: () {},
-                      child: Text('Sugerir um app')),
-                ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 160),
+                      child: SizedBox(
+                          height: 50,
+                          width: 500,
+                          child: TextField(
+                            decoration: InputDecoration(
+                                border: OutlineInputBorder(),
+                                label: Text('Buscar')),
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 10, left: 110),
+                      child: SizedBox(
+                        width: 170,
+                        height: 40,
+                        child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blue,
+                                shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8.0),
+                                )),
+                            onPressed: () {},
+                            child: Row(
+                              children: [
+                                Icon(
+                                  Icons.flag,
+                                  color: Colors.white,
+                                ),
+                                Text(
+                                  'Sugerir um app',
+                                  style: TextStyle(color: Colors.white),
+                                ),
+                              ],
+                            )),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 60),
@@ -515,8 +554,7 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                                         onPressed: () {},
                                         child: Text(
                                           'Webhooks',
-                                          style:
-                                              TextStyle(color: Colors.black),
+                                          style: TextStyle(color: Colors.black),
                                         )),
                                   ),
                                   Padding(
@@ -541,7 +579,6 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                             ]),
                       ),
                     ),
-
                     Padding(
                       padding: const EdgeInsets.only(left: 20),
                       child: Container(
@@ -552,41 +589,38 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                               width: 1,
                               color: const Color.fromARGB(255, 190, 188, 188),
                             ),
-                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(12))),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Column(
+                                Row(
                                   children: [
-                                    Row(
-                                      children: [
-                                        SizedBox(
-                                          width: 160,
-                                          child: ElevatedButton(
-                                              style: ElevatedButton.styleFrom(
-                                                  shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                              )),
-                                              onPressed: () {},
-                                              child: Text(
-                                                'Cademí',
-                                                style:
-                                                    TextStyle(color: Colors.black),
-                                              )),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(left: 80),
-                                          child: Icon(
-                                            Icons.add_box_outlined,
-                                            color: Colors.grey,
-                                            size: 30,
-                                          ),
-                                        )
-                                      ],
+                                    SizedBox(
+                                      width: 160,
+                                      child: ElevatedButton(
+                                          style: ElevatedButton.styleFrom(
+                                              shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                          )),
+                                          onPressed: () {},
+                                          child: Text(
+                                            'Cademí',
+                                            style:
+                                                TextStyle(color: const Color.fromARGB(255, 177, 92, 92)),
+                                          )),
                                     ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 80),
+                                      child: Icon(
+                                        Icons.add_box_outlined,
+                                        color: Colors.grey,
+                                        size: 30,
+                                      ),
+                                    )
                                   ],
                                 ),
                                 Padding(
@@ -611,41 +645,38 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                               width: 1,
                               color: const Color.fromARGB(255, 190, 188, 188),
                             ),
-                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(12))),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Column(
+                                Row(
                                   children: [
-                                    Row(
-                                      children: [
-                                        SizedBox(
-                                          width: 160,
-                                          child: ElevatedButton(
-                                              style: ElevatedButton.styleFrom(
-                                                  shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                              )),
-                                              onPressed: () {},
-                                              child: Text(
-                                                'Astron Members',
-                                                style:
-                                                    TextStyle(color: Colors.black),
-                                              )),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(left: 80),
-                                          child: Icon(
-                                            Icons.add_box_outlined,
-                                            color: Colors.grey,
-                                            size: 30,
-                                          ),
-                                        )
-                                      ],
+                                    SizedBox(
+                                      width: 160,
+                                      child: ElevatedButton(
+                                          style: ElevatedButton.styleFrom(
+                                              shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                          )),
+                                          onPressed: () {},
+                                          child: Text(
+                                            'Astron Members',
+                                            style:
+                                                TextStyle(color: const Color.fromARGB(255, 201, 32, 32)),
+                                          )),
                                     ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 80),
+                                      child: Icon(
+                                        Icons.add_box_outlined,
+                                        color: Colors.grey,
+                                        size: 30,
+                                      ),
+                                    )
                                   ],
                                 ),
                                 Padding(
@@ -670,41 +701,38 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                               width: 1,
                               color: const Color.fromARGB(255, 190, 188, 188),
                             ),
-                            borderRadius: BorderRadius.all(Radius.circular(12))),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(12))),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Column(
+                                Row(
                                   children: [
-                                    Row(
-                                      children: [
-                                        SizedBox(
-                                          width: 160,
-                                          child: ElevatedButton(
-                                              style: ElevatedButton.styleFrom(
-                                                  shape: RoundedRectangleBorder(
-                                                borderRadius:
-                                                    BorderRadius.circular(8.0),
-                                              )),
-                                              onPressed: () {},
-                                              child: Text(
-                                                'PlayPIX',
-                                                style:
-                                                    TextStyle(color: Colors.black),
-                                              )),
-                                        ),
-                                        Padding(
-                                          padding: const EdgeInsets.only(left: 80),
-                                          child: Icon(
-                                            Icons.add_box_outlined,
-                                            color: Colors.grey,
-                                            size: 30,
-                                          ),
-                                        )
-                                      ],
+                                    SizedBox(
+                                      width: 160,
+                                      child: ElevatedButton(
+                                          style: ElevatedButton.styleFrom(
+                                              shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8.0),
+                                          )),
+                                          onPressed: () {},
+                                          child: Text(
+                                            'PlayPIX',
+                                            style:
+                                                TextStyle(color: Color.fromARGB(255, 67, 127, 167)),
+                                          )),
                                     ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 80),
+                                      child: Icon(
+                                        Icons.add_box_outlined,
+                                        color: Colors.grey,
+                                        size: 30,
+                                      ),
+                                    )
                                   ],
                                 ),
                                 Padding(
@@ -740,35 +768,30 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Column(
+                              Row(
                                 children: [
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 160,
-                                        child: ElevatedButton(
-                                            style: ElevatedButton.styleFrom(
-                                                shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            )),
-                                            onPressed: () {},
-                                            child: Text(
-                                              'Voxuy',
-                                              style:
-                                                  TextStyle(color: Colors.black),
-                                            )),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 80),
-                                        child: Icon(
-                                          Icons.add_box_outlined,
-                                          color: Colors.grey,
-                                          size: 30,
-                                        ),
-                                      )
-                                    ],
+                                  SizedBox(
+                                    width: 160,
+                                    child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        )),
+                                        onPressed: () {},
+                                        child: Text(
+                                          'Voxuy',
+                                          style: TextStyle(color: Color.fromARGB(255, 42, 30, 146)),
+                                        )),
                                   ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 80),
+                                    child: Icon(
+                                      Icons.add_box_outlined,
+                                      color: Colors.grey,
+                                      size: 30,
+                                    ),
+                                  )
                                 ],
                               ),
                               Padding(
@@ -799,35 +822,30 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Column(
+                              Row(
                                 children: [
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 160,
-                                        child: ElevatedButton(
-                                            style: ElevatedButton.styleFrom(
-                                                shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            )),
-                                            onPressed: () {},
-                                            child: Text(
-                                              'Notazz',
-                                              style:
-                                                  TextStyle(color: Colors.black),
-                                            )),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 80),
-                                        child: Icon(
-                                          Icons.add_box_outlined,
-                                          color: Colors.grey,
-                                          size: 30,
-                                        ),
-                                      )
-                                    ],
+                                  SizedBox(
+                                    width: 160,
+                                    child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        )),
+                                        onPressed: () {},
+                                        child: Text(
+                                          'Notazz',
+                                          style: TextStyle(color: Color.fromARGB(255, 72, 160, 94)),
+                                        )),
                                   ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 80),
+                                    child: Icon(
+                                      Icons.add_box_outlined,
+                                      color: Colors.grey,
+                                      size: 30,
+                                    ),
+                                  )
                                 ],
                               ),
                               Padding(
@@ -858,35 +876,30 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Column(
+                              Row(
                                 children: [
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 160,
-                                        child: ElevatedButton(
-                                            style: ElevatedButton.styleFrom(
-                                                shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            )),
-                                            onPressed: () {},
-                                            child: Text(
-                                              'MemberKit',
-                                              style:
-                                                  TextStyle(color: Colors.black),
-                                            )),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 80),
-                                        child: Icon(
-                                          Icons.add_box_outlined,
-                                          color: Colors.grey,
-                                          size: 30,
-                                        ),
-                                      )
-                                    ],
+                                  SizedBox(
+                                    width: 160,
+                                    child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        )),
+                                        onPressed: () {},
+                                        child: Text(
+                                          'MemberKit',
+                                          style: TextStyle(color: Color.fromARGB(255, 114, 58, 179)),
+                                        )),
                                   ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 80),
+                                    child: Icon(
+                                      Icons.add_box_outlined,
+                                      color: Colors.grey,
+                                      size: 30,
+                                    ),
+                                  )
                                 ],
                               ),
                               Padding(
@@ -917,35 +930,30 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Column(
+                              Row(
                                 children: [
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 160,
-                                        child: ElevatedButton(
-                                            style: ElevatedButton.styleFrom(
-                                                shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            )),
-                                            onPressed: () {},
-                                            child: Text(
-                                              'ActiveCampaign',
-                                              style:
-                                                  TextStyle(color: Colors.black),
-                                            )),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 80),
-                                        child: Icon(
-                                          Icons.add_box_outlined,
-                                          color: Colors.grey,
-                                          size: 30,
-                                        ),
-                                      )
-                                    ],
+                                  SizedBox(
+                                    width: 160,
+                                    child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        )),
+                                        onPressed: () {},
+                                        child: Text(
+                                          'ActiveCampaign',
+                                          style: TextStyle(color: Color.fromARGB(255, 122, 196, 245)),
+                                        )),
                                   ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 80),
+                                    child: Icon(
+                                      Icons.add_box_outlined,
+                                      color: Colors.grey,
+                                      size: 30,
+                                    ),
+                                  )
                                 ],
                               ),
                               Padding(
@@ -980,35 +988,30 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Column(
+                              Row(
                                 children: [
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 160,
-                                        child: ElevatedButton(
-                                            style: ElevatedButton.styleFrom(
-                                                shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            )),
-                                            onPressed: () {},
-                                            child: Text(
-                                              'Mailchimp',
-                                              style:
-                                                  TextStyle(color: Colors.black),
-                                            )),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 80),
-                                        child: Icon(
-                                          Icons.add_box_outlined,
-                                          color: Colors.grey,
-                                          size: 30,
-                                        ),
-                                      )
-                                    ],
+                                  SizedBox(
+                                    width: 160,
+                                    child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        )),
+                                        onPressed: () {},
+                                        child: Text(
+                                          'Mailchimp',
+                                          style: TextStyle(color: Color.fromARGB(255, 212, 181, 76)),
+                                        )),
                                   ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 80),
+                                    child: Icon(
+                                      Icons.add_box_outlined,
+                                      color: Colors.grey,
+                                      size: 30,
+                                    ),
+                                  )
                                 ],
                               ),
                               Padding(
@@ -1039,35 +1042,30 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Column(
+                              Row(
                                 children: [
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 160,
-                                        child: ElevatedButton(
-                                            style: ElevatedButton.styleFrom(
-                                                shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            )),
-                                            onPressed: () {},
-                                            child: Text(
-                                              'Hotzapp',
-                                              style:
-                                                  TextStyle(color: Colors.black),
-                                            )),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 80),
-                                        child: Icon(
-                                          Icons.add_box_outlined,
-                                          color: Colors.grey,
-                                          size: 30,
-                                        ),
-                                      )
-                                    ],
+                                  SizedBox(
+                                    width: 160,
+                                    child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        )),
+                                        onPressed: () {},
+                                        child: Text(
+                                          'Hotzapp',
+                                          style: TextStyle(color: Color.fromARGB(255, 180, 105, 19)),
+                                        )),
                                   ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 80),
+                                    child: Icon(
+                                      Icons.add_box_outlined,
+                                      color: Colors.grey,
+                                      size: 30,
+                                    ),
+                                  )
                                 ],
                               ),
                               Padding(
@@ -1098,35 +1096,30 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Column(
+                              Row(
                                 children: [
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 160,
-                                        child: ElevatedButton(
-                                            style: ElevatedButton.styleFrom(
-                                                shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            )),
-                                            onPressed: () {},
-                                            child: Text(
-                                              'Pluga',
-                                              style:
-                                                  TextStyle(color: Colors.black),
-                                            )),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 80),
-                                        child: Icon(
-                                          Icons.add_box_outlined,
-                                          color: Colors.grey,
-                                          size: 30,
-                                        ),
-                                      )
-                                    ],
+                                  SizedBox(
+                                    width: 160,
+                                    child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        )),
+                                        onPressed: () {},
+                                        child: Text(
+                                          'Pluga',
+                                          style: TextStyle(color: Color.fromARGB(255, 68, 133, 100)),
+                                        )),
                                   ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 80),
+                                    child: Icon(
+                                      Icons.add_box_outlined,
+                                      color: Colors.grey,
+                                      size: 30,
+                                    ),
+                                  )
                                 ],
                               ),
                               Padding(
@@ -1158,35 +1151,30 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Column(
+                              Row(
                                 children: [
-                                  Row(
-                                    children: [
-                                      SizedBox(
-                                        width: 160,
-                                        child: ElevatedButton(
-                                            style: ElevatedButton.styleFrom(
-                                                shape: RoundedRectangleBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(8.0),
-                                            )),
-                                            onPressed: () {},
-                                            child: Text(
-                                              'Leadlovers',
-                                              style:
-                                                  TextStyle(color: Colors.black),
-                                            )),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(left: 80),
-                                        child: Icon(
-                                          Icons.add_box_outlined,
-                                          color: Colors.grey,
-                                          size: 30,
-                                        ),
-                                      )
-                                    ],
+                                  SizedBox(
+                                    width: 160,
+                                    child: ElevatedButton(
+                                        style: ElevatedButton.styleFrom(
+                                            shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        )),
+                                        onPressed: () {},
+                                        child: Text(
+                                          'Leadlovers',
+                                          style: TextStyle(color: Color.fromARGB(255, 190, 29, 137)),
+                                        )),
                                   ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 80),
+                                    child: Icon(
+                                      Icons.add_box_outlined,
+                                      color: Colors.grey,
+                                      size: 30,
+                                    ),
+                                  )
                                 ],
                               ),
                               Padding(
