@@ -8,23 +8,29 @@ import 'package:tela_cadastro/financas.dart';
 import 'package:tela_cadastro/produtos.dart';
 import 'package:tela_cadastro/vendas.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:tela_cadastro/theme.dart';
 
 class IndiqueEGanheStl extends StatelessWidget {
   const IndiqueEGanheStl({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: IndiqueEGanheStf(),
-      routes: {
-        '/dashBoard': (context) => DashBoardStl(),
-        '/vendas': (context) => VendasStl(),
-        '/produtos': (context) => ProdutosStl(),
-        '/financas': (context) => FinancasStl(),
-        '/extensoes': (context) => ExtensoesStl(),
-        '/compras': (context) => ComprasStl(),
-        '/indiqueEGanhe': (context) => IndiqueEGanheStl(),
-      },
+     return AnimatedBuilder(
+      animation: appController.instance,
+      builder: (animation, builder){
+        return MaterialApp(
+          theme: ThemeData(brightness: appController.instance.dartTheme ? Brightness.dark : Brightness.light),
+          home: IndiqueEGanheStf(),
+          routes: {
+            '/dashBoard': (context) => DashBoardStl(),
+            '/vendas': (context) => VendasStl(),
+            '/produtos': (context) => ProdutosStl(),
+            '/financas': (context) => FinancasStl(),
+            '/extensoes': (context) => ExtensoesStl(),
+            '/compras': (context) =>ComprasStl(),
+            '/indiqueEGanhe': (context) =>IndiqueEGanheStl(),
+          },
     );
+  });
   }
 }
 
@@ -35,7 +41,7 @@ class IndiqueEGanheStf extends StatefulWidget {
 }
 
 class _IndiqueEGanheStfState extends State<IndiqueEGanheStf> {
-  TextEditingController _textController = TextEditingController(
+  final TextEditingController _textController = TextEditingController(
       text: 'https://app.kirvano.com/signup?ref=J69W4BJ6');
 
   @override
@@ -365,7 +371,9 @@ class _IndiqueEGanheStfState extends State<IndiqueEGanheStf> {
                   width: 200,
                   height: 40,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      appController.instance.changeTheme();
+                    },
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(

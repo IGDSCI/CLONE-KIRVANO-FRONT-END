@@ -7,23 +7,29 @@ import 'package:tela_cadastro/extensoes.dart';
 import 'package:tela_cadastro/financas.dart';
 import 'package:tela_cadastro/indique_e_ganhe.dart';
 import 'package:tela_cadastro/produtos.dart';
+import 'package:tela_cadastro/theme.dart';
 
 class VendasStl extends StatelessWidget {
   const VendasStl({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: VendasStf(),
-      routes: {
-        '/dashBoard': (context) => DashBoardStl(),
-        '/vendas': (context) => VendasStl(),
-        '/produtos': (context) => ProdutosStl(),
-        '/financas': (context) => FinancasStl(),
-        '/extensoes': (context) => ExtensoesStl(),
-        '/compras': (context) =>ComprasStl(),
-        '/indiqueEGanhe': (context) =>IndiqueEGanheStl(),
-      },
+     return AnimatedBuilder(
+      animation: appController.instance,
+      builder: (animation, builder){
+        return MaterialApp(
+          theme: ThemeData(brightness: appController.instance.dartTheme ? Brightness.dark : Brightness.light),
+          home: VendasStf(),
+          routes: {
+            '/dashBoard': (context) => DashBoardStl(),
+            '/vendas': (context) => VendasStl(),
+            '/produtos': (context) => ProdutosStl(),
+            '/financas': (context) => FinancasStl(),
+            '/extensoes': (context) => ExtensoesStl(),
+            '/compras': (context) =>ComprasStl(),
+            '/indiqueEGanhe': (context) =>IndiqueEGanheStl(),
+          },
     );
+  });
   }
 }
 
@@ -369,7 +375,9 @@ class _VendasStfState extends State<VendasStf> {
                   width: 200,
                   height: 40,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      appController.instance.changeTheme();
+                    },
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(

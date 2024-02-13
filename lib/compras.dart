@@ -7,23 +7,29 @@ import 'package:tela_cadastro/financas.dart';
 import 'package:tela_cadastro/indique_e_ganhe.dart';
 import 'package:tela_cadastro/produtos.dart';
 import 'package:tela_cadastro/vendas.dart';
+import 'package:tela_cadastro/theme.dart';
 
 class ComprasStl extends StatelessWidget {
   const ComprasStl({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: ComprasStf(),
-      routes: {
-        '/dashBoard': (context) => DashBoardStl(),
-        '/vendas': (context) => VendasStl(),
-        '/produtos': (context) => ProdutosStl(),
-        '/financas': (context) => FinancasStl(),
-        '/extensoes': (context) => ExtensoesStl(),
-        '/compras': (context) =>ComprasStl(),
-        '/indiqueEGanhe': (context) =>IndiqueEGanheStl(),
-      },
+     return AnimatedBuilder(
+      animation: appController.instance,
+      builder: (animation, builder){
+        return MaterialApp(
+          theme: ThemeData(brightness: appController.instance.dartTheme ? Brightness.dark : Brightness.light),
+          home: ComprasStf(),
+          routes: {
+            '/dashBoard': (context) => DashBoardStl(),
+            '/vendas': (context) => VendasStl(),
+            '/produtos': (context) => ProdutosStl(),
+            '/financas': (context) => FinancasStl(),
+            '/extensoes': (context) => ExtensoesStl(),
+            '/compras': (context) =>ComprasStl(),
+            '/indiqueEGanhe': (context) =>IndiqueEGanheStl(),
+          },
     );
+  });
   }
 }
 
@@ -369,7 +375,9 @@ class _ComprasStfState extends State<ComprasStf> {
                   width: 200,
                   height: 40,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      appController.instance.changeTheme();
+                    },
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
