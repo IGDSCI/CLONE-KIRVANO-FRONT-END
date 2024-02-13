@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:tela_cadastro/financas.dart';
+import 'package:tela_cadastro/extensoes.dart';
 import 'package:tela_cadastro/login.dart';
 import 'package:tela_cadastro/vendas.dart';
 
@@ -11,12 +11,12 @@ class TelaCadastroStl extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: TelaCadastroStf(),
-      initialRoute: '/financas',
+      initialRoute: '/extensoes',
       routes: {
         '/login': (context) => LoginStl(),
         '/telaCadastro': (context) => TelaCadastroStl(),
         '/vendas': (context) => VendasStl(),
-        '/financas': (context) => FinancasStl(),
+        '/extensoes': (context) => ExtensoesStl(),
       },
     );
   }
