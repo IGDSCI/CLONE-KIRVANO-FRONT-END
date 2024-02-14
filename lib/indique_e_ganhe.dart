@@ -494,6 +494,7 @@ class _IndiqueEGanheStfState extends State<IndiqueEGanheStf> {
                             style: TextStyle(fontSize: 20),
                             controller: _textController,
                             decoration: InputDecoration(
+                              contentPadding: EdgeInsets.symmetric(vertical: 8.0),
                               border: OutlineInputBorder(),
                             ),
                           ),
