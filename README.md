@@ -1,4 +1,4 @@
-![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/030c7a97-1511-4941-bda8-43cb0346d3f3)# "Clone" do site Kirvano.com
+# "Clone" do site Kirvano.com
 
 ## Desenvolvi este projeto pessoal com o objetivo de consolidar os conhecimentos adquiridos em videoaulas de Flutter. Inspirado no design do site da Kirvano, escolhei por replicá-lo devido à sua estética limpa, o que facilitou o desenvolvimento e aplicação prática dos meus conhecimentos.
 
