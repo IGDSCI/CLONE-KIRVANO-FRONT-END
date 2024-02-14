@@ -719,7 +719,8 @@ class _ConfiguracoesStfState extends State<ConfiguracoesStf> {
                             decoration: BoxDecoration(
                                 border: Border.all(
                                   width: 1,
-                                  color: const Color.fromARGB(255, 190, 188, 188),
+                                  color:
+                                      const Color.fromARGB(255, 190, 188, 188),
                                 ),
                                 borderRadius:
                                     BorderRadius.all(Radius.circular(12))),
@@ -732,40 +733,44 @@ class _ConfiguracoesStfState extends State<ConfiguracoesStf> {
                                       children: [
                                         Icon(
                                           Icons.star_rate_rounded,
-                                          color: const Color.fromARGB(255, 236, 216, 33),
+                                          color: const Color.fromARGB(
+                                              255, 236, 216, 33),
                                           size: 30,
-                                          ),
+                                        ),
                                         Text(
                                           'Pessoa física',
                                           style: TextStyle(fontSize: 18),
                                         ),
                                         Padding(
-                                          padding: const EdgeInsets.only(left: 230),
+                                          padding:
+                                              const EdgeInsets.only(left: 230),
                                           child: Container(
                                             height: 25,
                                             width: 50,
                                             decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.all(Radius.circular(8)),
-                                            border: Border.all(
-                                              width: 1,
-                                              color: Colors.blue,
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(8)),
+                                              border: Border.all(
+                                                width: 1,
+                                                color: Colors.blue,
+                                              ),
                                             ),
-                                          ),
                                             child: Center(
                                               child: Text(
-                                              'Sócio',
-                                              style: TextStyle(color: Colors.blue),
+                                                'Sócio',
+                                                style: TextStyle(
+                                                    color: Colors.blue),
                                               ),
                                             ),
                                           ),
                                         ),
-
                                         Padding(
-                                           padding: const EdgeInsets.only(left: 230),
+                                          padding:
+                                              const EdgeInsets.only(left: 230),
                                           child: Text(
                                             'Gustavo dos Santos Capeletti',
                                             style: TextStyle(fontSize: 18),
-                                            ),
+                                          ),
                                         )
                                       ],
                                     ),
@@ -775,7 +780,7 @@ class _ConfiguracoesStfState extends State<ConfiguracoesStf> {
                         ),
                       ]),
                 ),
-              ),
+              )
             ],
           ),
         )

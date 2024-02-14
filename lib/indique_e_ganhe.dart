@@ -15,24 +15,27 @@ class IndiqueEGanheStl extends StatelessWidget {
   const IndiqueEGanheStl({super.key});
   @override
   Widget build(BuildContext context) {
-     return AnimatedBuilder(
-      animation: appController.instance,
-      builder: (animation, builder){
-        return MaterialApp(
-          theme: ThemeData(brightness: appController.instance.dartTheme ? Brightness.dark : Brightness.light),
-          home: IndiqueEGanheStf(),
-          routes: {
-            '/dashBoard': (context) => DashBoardStl(),
-            '/vendas': (context) => VendasStl(),
-            '/produtos': (context) => ProdutosStl(),
-            '/financas': (context) => FinancasStl(),
-            '/extensoes': (context) => ExtensoesStl(),
-            '/compras': (context) =>ComprasStl(),
-            '/indiqueEGanhe': (context) =>IndiqueEGanheStl(),
-            '/configuracoes': (context) => ConfiguracoesStl(),
-          },
-    );
-  });
+    return AnimatedBuilder(
+        animation: appController.instance,
+        builder: (animation, builder) {
+          return MaterialApp(
+            theme: ThemeData(
+                brightness: appController.instance.dartTheme
+                    ? Brightness.dark
+                    : Brightness.light),
+            home: IndiqueEGanheStf(),
+            routes: {
+              '/dashBoard': (context) => DashBoardStl(),
+              '/vendas': (context) => VendasStl(),
+              '/produtos': (context) => ProdutosStl(),
+              '/financas': (context) => FinancasStl(),
+              '/extensoes': (context) => ExtensoesStl(),
+              '/compras': (context) => ComprasStl(),
+              '/indiqueEGanhe': (context) => IndiqueEGanheStl(),
+              '/configuracoes': (context) => ConfiguracoesStl(),
+            },
+          );
+        });
   }
 }
 
@@ -418,7 +421,8 @@ class _IndiqueEGanheStfState extends State<IndiqueEGanheStf> {
                   height: 40,
                   child: ElevatedButton(
                     onPressed: () {
-                       Navigator.of(context).pushReplacementNamed('/configuracoes');
+                      Navigator.of(context)
+                          .pushReplacementNamed('/configuracoes');
                     },
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -498,7 +502,8 @@ class _IndiqueEGanheStfState extends State<IndiqueEGanheStf> {
                             style: TextStyle(fontSize: 20),
                             controller: _textController,
                             decoration: InputDecoration(
-                              contentPadding: EdgeInsets.symmetric(vertical: 8.0),
+                              contentPadding:
+                                  EdgeInsets.symmetric(vertical: 8.0),
                               border: OutlineInputBorder(),
                             ),
                           ),
@@ -524,7 +529,8 @@ class _IndiqueEGanheStfState extends State<IndiqueEGanheStf> {
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 190),
-                child: Row(crossAxisAlignment:  CrossAxisAlignment.end,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Column(
                       children: [
@@ -614,7 +620,8 @@ class _IndiqueEGanheStfState extends State<IndiqueEGanheStf> {
                           height: 300,
                           width: 800,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(Radius.circular(12)),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(12)),
                               border: Border.all(
                                 color: Color.fromARGB(255, 190, 188, 188),
                                 width: 1,
@@ -629,45 +636,47 @@ class _IndiqueEGanheStfState extends State<IndiqueEGanheStf> {
                                   style: TextStyle(fontSize: 18),
                                 ),
                                 Padding(
-                          padding: const EdgeInsets.only(top: 30, right: 20),
-                          child: SizedBox(
-                            width: 1200,
-                            height: 200,
-                            child: LineChart(
-                              LineChartData(
-                                minX: 0,
-                                maxX: 10,
-                                minY: 0,
-                                maxY: 10,
-                                titlesData: FlTitlesData(
-                                    rightTitles: AxisTitles(),
-                                    topTitles: AxisTitles(),
-                                    show: true),
-                                lineBarsData: [
-                                  LineChartBarData(
-                                    spots: [
-                                      FlSpot(0, 2),
-                                      FlSpot(1, 2),
-                                      FlSpot(2, 4),
-                                      FlSpot(3, 1),
-                                      FlSpot(4, 2),
-                                      FlSpot(5, 5),
-                                      FlSpot(6, 6),
-                                      FlSpot(7, 7),
-                                      FlSpot(8, 3),
-                                      FlSpot(9, 4),
-                                      FlSpot(10, 3),
-                                    ],
-                                    isCurved: true,
-                                    color: Colors.blue,
-                                    dotData: FlDotData(show: false),
-                                    belowBarData: BarAreaData(show: false),
+                                  padding:
+                                      const EdgeInsets.only(top: 30, right: 20),
+                                  child: SizedBox(
+                                    width: 1200,
+                                    height: 200,
+                                    child: LineChart(
+                                      LineChartData(
+                                        minX: 0,
+                                        maxX: 10,
+                                        minY: 0,
+                                        maxY: 10,
+                                        titlesData: FlTitlesData(
+                                            rightTitles: AxisTitles(),
+                                            topTitles: AxisTitles(),
+                                            show: true),
+                                        lineBarsData: [
+                                          LineChartBarData(
+                                            spots: [
+                                              FlSpot(0, 2),
+                                              FlSpot(1, 2),
+                                              FlSpot(2, 4),
+                                              FlSpot(3, 1),
+                                              FlSpot(4, 2),
+                                              FlSpot(5, 5),
+                                              FlSpot(6, 6),
+                                              FlSpot(7, 7),
+                                              FlSpot(8, 3),
+                                              FlSpot(9, 4),
+                                              FlSpot(10, 3),
+                                            ],
+                                            isCurved: true,
+                                            color: Colors.blue,
+                                            dotData: FlDotData(show: false),
+                                            belowBarData:
+                                                BarAreaData(show: false),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
                                   ),
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
+                                ),
                               ],
                             ),
                           )),

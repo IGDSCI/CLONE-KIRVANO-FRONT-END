@@ -14,24 +14,27 @@ class ExtensoesStl extends StatelessWidget {
   const ExtensoesStl({super.key});
   @override
   Widget build(BuildContext context) {
-     return AnimatedBuilder(
-      animation: appController.instance,
-      builder: (animation, builder){
-        return MaterialApp(
-          theme: ThemeData(brightness: appController.instance.dartTheme ? Brightness.dark : Brightness.light),
-          home: ExtensoesStf(),
-          routes: {
-            '/dashBoard': (context) => DashBoardStl(),
-            '/vendas': (context) => VendasStl(),
-            '/produtos': (context) => ProdutosStl(),
-            '/financas': (context) => FinancasStl(),
-            '/extensoes': (context) => ExtensoesStl(),
-            '/compras': (context) =>ComprasStl(),
-            '/indiqueEGanhe': (context) =>IndiqueEGanheStl(),
-            '/configuracoes': (context) => ConfiguracoesStl(),
-          },
-    );
-  });
+    return AnimatedBuilder(
+        animation: appController.instance,
+        builder: (animation, builder) {
+          return MaterialApp(
+            theme: ThemeData(
+                brightness: appController.instance.dartTheme
+                    ? Brightness.dark
+                    : Brightness.light),
+            home: ExtensoesStf(),
+            routes: {
+              '/dashBoard': (context) => DashBoardStl(),
+              '/vendas': (context) => VendasStl(),
+              '/produtos': (context) => ProdutosStl(),
+              '/financas': (context) => FinancasStl(),
+              '/extensoes': (context) => ExtensoesStl(),
+              '/compras': (context) => ComprasStl(),
+              '/indiqueEGanhe': (context) => IndiqueEGanheStl(),
+              '/configuracoes': (context) => ConfiguracoesStl(),
+            },
+          );
+        });
   }
 }
 
@@ -414,7 +417,8 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                   height: 40,
                   child: ElevatedButton(
                     onPressed: () {
-                       Navigator.of(context).pushReplacementNamed('/configuracoes');
+                      Navigator.of(context)
+                          .pushReplacementNamed('/configuracoes');
                     },
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
@@ -504,8 +508,7 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(),
                                 hintText: 'Buscar',
-                                prefixIcon: Icon(Icons.search)
-                                ),
+                                prefixIcon: Icon(Icons.search)),
                           )),
                     ),
                     Padding(
@@ -623,8 +626,9 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                                           onPressed: () {},
                                           child: Text(
                                             'Cademí',
-                                            style:
-                                                TextStyle(color: const Color.fromARGB(255, 177, 92, 92)),
+                                            style: TextStyle(
+                                                color: const Color.fromARGB(
+                                                    255, 177, 92, 92)),
                                           )),
                                     ),
                                     Padding(
@@ -679,8 +683,9 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                                           onPressed: () {},
                                           child: Text(
                                             'Astron Members',
-                                            style:
-                                                TextStyle(color: const Color.fromARGB(255, 201, 32, 32)),
+                                            style: TextStyle(
+                                                color: const Color.fromARGB(
+                                                    255, 201, 32, 32)),
                                           )),
                                     ),
                                     Padding(
@@ -735,8 +740,9 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                                           onPressed: () {},
                                           child: Text(
                                             'PlayPIX',
-                                            style:
-                                                TextStyle(color: Color.fromARGB(255, 67, 127, 167)),
+                                            style: TextStyle(
+                                                color: Color.fromARGB(
+                                                    255, 67, 127, 167)),
                                           )),
                                     ),
                                     Padding(
@@ -795,7 +801,9 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                                         onPressed: () {},
                                         child: Text(
                                           'Voxuy',
-                                          style: TextStyle(color: Color.fromARGB(255, 42, 30, 146)),
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 42, 30, 146)),
                                         )),
                                   ),
                                   Padding(
@@ -849,7 +857,9 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                                         onPressed: () {},
                                         child: Text(
                                           'Notazz',
-                                          style: TextStyle(color: Color.fromARGB(255, 72, 160, 94)),
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 72, 160, 94)),
                                         )),
                                   ),
                                   Padding(
@@ -903,7 +913,9 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                                         onPressed: () {},
                                         child: Text(
                                           'MemberKit',
-                                          style: TextStyle(color: Color.fromARGB(255, 114, 58, 179)),
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 114, 58, 179)),
                                         )),
                                   ),
                                   Padding(
@@ -957,7 +969,9 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                                         onPressed: () {},
                                         child: Text(
                                           'ActiveCampaign',
-                                          style: TextStyle(color: Color.fromARGB(255, 122, 196, 245)),
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 122, 196, 245)),
                                         )),
                                   ),
                                   Padding(
@@ -1015,7 +1029,9 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                                         onPressed: () {},
                                         child: Text(
                                           'Mailchimp',
-                                          style: TextStyle(color: Color.fromARGB(255, 212, 181, 76)),
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 212, 181, 76)),
                                         )),
                                   ),
                                   Padding(
@@ -1069,7 +1085,9 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                                         onPressed: () {},
                                         child: Text(
                                           'Hotzapp',
-                                          style: TextStyle(color: Color.fromARGB(255, 180, 105, 19)),
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 180, 105, 19)),
                                         )),
                                   ),
                                   Padding(
@@ -1123,7 +1141,9 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                                         onPressed: () {},
                                         child: Text(
                                           'Pluga',
-                                          style: TextStyle(color: Color.fromARGB(255, 68, 133, 100)),
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 68, 133, 100)),
                                         )),
                                   ),
                                   Padding(
@@ -1178,7 +1198,9 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                                         onPressed: () {},
                                         child: Text(
                                           'Leadlovers',
-                                          style: TextStyle(color: Color.fromARGB(255, 190, 29, 137)),
+                                          style: TextStyle(
+                                              color: Color.fromARGB(
+                                                  255, 190, 29, 137)),
                                         )),
                                   ),
                                   Padding(

@@ -39,11 +39,13 @@ class DashBoardStl extends StatelessWidget {
   }
 }
 
+
 class DashBoardStf extends StatefulWidget {
   const DashBoardStf({super.key});
   @override
   State<DashBoardStf> createState() => _DashBoardStfState();
 }
+
 
 class _DashBoardStfState extends State<DashBoardStf> {
   double num1 = 0;
@@ -431,7 +433,8 @@ class _DashBoardStfState extends State<DashBoardStf> {
                   height: 40,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.of(context).pushReplacementNamed('/configuracoes');
+                      Navigator.of(context)
+                          .pushReplacementNamed('/configuracoes');
                     },
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
