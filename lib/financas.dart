@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:tela_cadastro/compras.dart';
+import 'package:tela_cadastro/configuracoes.dart';
 import 'package:tela_cadastro/dashboard.dart';
 import 'package:tela_cadastro/extensoes.dart';
 import 'package:tela_cadastro/indique_e_ganhe.dart';
@@ -27,6 +28,7 @@ class FinancasStl extends StatelessWidget {
             '/extensoes': (context) => ExtensoesStl(),
             '/compras': (context) =>ComprasStl(),
             '/indiqueEGanhe': (context) =>IndiqueEGanheStl(),
+            '/configuracoes': (context) => ConfiguracoesStl(),
           },
     );
   });
@@ -420,7 +422,9 @@ class _FinancasStfState extends State<FinancasStf> {
                   width: 200,
                   height: 40,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                       Navigator.of(context).pushReplacementNamed('/configuracoes');
+                    },
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                           RoundedRectangleBorder(
