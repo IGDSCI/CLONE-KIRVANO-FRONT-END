@@ -1,6 +1,6 @@
-# Tela de cadastro
+# "Clone" do site Kirvano.com
 
-Projeto pessoal criado para ajudar a fixar o conteúdo aprendido nas videoaulas de Flutter, criei um Front-end básico de cadastro inspirado no site da Kirvano.com
+Desenvolvi este projeto pessoal com o objetivo de consolidar os conhecimentos adquiridos em videoaulas de Flutter. Inspirado no design do site da Kirvano, escolhei por replicá-lo devido à sua estética limpa, o que facilitou o desenvolvimento e aplicação prática dos meus conhecimentos.
 
 # Imagens da aplicação:
 
