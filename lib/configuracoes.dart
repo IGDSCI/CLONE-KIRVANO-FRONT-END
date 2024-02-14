@@ -454,6 +454,331 @@ class _ConfiguracoesStfState extends State<ConfiguracoesStf> {
             ],
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.only(left: 180, top: 56),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Configurações',
+                style: TextStyle(fontSize: 26),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: Container(
+                  height: 350,
+                  width: 1200,
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1,
+                        color: const Color.fromARGB(255, 190, 188, 188),
+                      ),
+                      borderRadius: BorderRadius.all(Radius.circular(12))),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Container(
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                          width: 1,
+                                          color: const Color.fromARGB(
+                                              255, 190, 188, 188),
+                                        ),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(12))),
+                                    child: Icon(Icons.person_outline)),
+                              ),
+                              Text(
+                                'Perfil',
+                                style: TextStyle(fontSize: 18),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 920),
+                                child: SizedBox(
+                                  width: 40,
+                                  height: 40,
+                                  child: ElevatedButton(
+                                      onPressed: () {},
+                                      style: ElevatedButton.styleFrom(
+                                        padding: EdgeInsets.zero,
+                                        shape: RoundedRectangleBorder(
+                                            side: BorderSide(
+                                              width: 2,
+                                              color: Colors.blue,
+                                            ),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(12))),
+                                      ),
+                                      child: Icon(
+                                        Icons.remove_red_eye_outlined,
+                                        color: Colors.blue,
+                                      )),
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 20),
+                                child: SizedBox(
+                                  width: 85,
+                                  height: 40,
+                                  child: ElevatedButton(
+                                      onPressed: () {},
+                                      style: ElevatedButton.styleFrom(
+                                        padding: EdgeInsets.zero,
+                                        shape: RoundedRectangleBorder(
+                                            side: BorderSide(
+                                              width: 2,
+                                              color: Colors.blue,
+                                            ),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(12))),
+                                      ),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            Icons.edit,
+                                            color: Colors.blue,
+                                          ),
+                                          Text(
+                                            'Editar',
+                                            style:
+                                                TextStyle(color: Colors.blue),
+                                          )
+                                        ],
+                                      )),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Row(
+                            children: [
+                              Image.network(
+                                  'https://cdn-icons-png.flaticon.com/512/5987/5987462.png',
+                                  width: 200),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 30),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('Nome'),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 4),
+                                      child: Text(
+                                        'Gustavo dos Santos Capeletti',
+                                        style: TextStyle(fontSize: 18),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 20),
+                                      child: Text('Documento'),
+                                    ),
+                                    Text(
+                                      '000.000.000-00',
+                                      style: TextStyle(fontSize: 18),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 20),
+                                      child: Text('Telefone'),
+                                    ),
+                                    Text(
+                                      '+55 00 00000-0000',
+                                      style: TextStyle(fontSize: 18),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 30),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text('E-mail'),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 4),
+                                      child: Text(
+                                        'gustavocapeletti007@gmail.com',
+                                        style: TextStyle(fontSize: 18),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 20),
+                                      child: Text('Nacionalidade'),
+                                    ),
+                                    Text(
+                                      'Brasileiro',
+                                      style: TextStyle(fontSize: 18),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 20),
+                                      child: Text('Área de atuação'),
+                                    ),
+                                    Text(
+                                      'Brasil',
+                                      style: TextStyle(fontSize: 18),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ]),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: Container(
+                  height: 260,
+                  width: 1200,
+                  decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 1,
+                        color: const Color.fromARGB(255, 190, 188, 188),
+                      ),
+                      borderRadius: BorderRadius.all(Radius.circular(12))),
+                  child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Row(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Container(
+                                    height: 40,
+                                    width: 40,
+                                    decoration: BoxDecoration(
+                                        border: Border.all(
+                                          width: 1,
+                                          color: const Color.fromARGB(
+                                              255, 190, 188, 188),
+                                        ),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(12))),
+                                    child: Icon(Icons.business_center)),
+                              ),
+                              Text(
+                                'Negócios',
+                                style: TextStyle(fontSize: 18),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 886),
+                                child: SizedBox(
+                                  width: 130,
+                                  height: 40,
+                                  child: ElevatedButton(
+                                      onPressed: () {},
+                                      style: ElevatedButton.styleFrom(
+                                        padding: EdgeInsets.zero,
+                                        shape: RoundedRectangleBorder(
+                                            side: BorderSide(
+                                              width: 2,
+                                              color: Colors.blue,
+                                            ),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(12))),
+                                      ),
+                                      child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Icon(
+                                            Icons.add_circle_outline_rounded,
+                                            color: Colors.blue,
+                                          ),
+                                          Text(
+                                            'Novo negócio',
+                                            style:
+                                                TextStyle(color: Colors.blue),
+                                          )
+                                        ],
+                                      )),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(top: 30),
+                          child: Container(
+                            height: 100,
+                            width: 1100,
+                            decoration: BoxDecoration(
+                                border: Border.all(
+                                  width: 1,
+                                  color: const Color.fromARGB(255, 190, 188, 188),
+                                ),
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12))),
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.star_rate_rounded,
+                                          color: const Color.fromARGB(255, 236, 216, 33),
+                                          size: 30,
+                                          ),
+                                        Text(
+                                          'Pessoa física',
+                                          style: TextStyle(fontSize: 18),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 230),
+                                          child: Container(
+                                            height: 25,
+                                            width: 50,
+                                            decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.all(Radius.circular(8)),
+                                            border: Border.all(
+                                              width: 1,
+                                              color: Colors.blue,
+                                            ),
+                                          ),
+                                            child: Center(
+                                              child: Text(
+                                              'Sócio',
+                                              style: TextStyle(color: Colors.blue),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+
+                                        Padding(
+                                           padding: const EdgeInsets.only(left: 230),
+                                          child: Text(
+                                            'Gustavo dos Santos Capeletti',
+                                            style: TextStyle(fontSize: 18),
+                                            ),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ]),
+                          ),
+                        ),
+                      ]),
+                ),
+              ),
+            ],
+          ),
+        )
       ]),
     );
   }
