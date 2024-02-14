@@ -95,7 +95,7 @@ class _DashBoardStfState extends State<DashBoardStf> {
                       children: [
                         Icon(
                           Icons.dashboard,
-                          color: Colors.black,
+                          color: Colors.blue,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 8),
@@ -103,7 +103,7 @@ class _DashBoardStfState extends State<DashBoardStf> {
                             ' Dashboard',
                             style: TextStyle(
                               fontSize: 15,
-                              color: Colors.black,
+                              color: Colors.blue,
                             ),
                           ),
                         ),

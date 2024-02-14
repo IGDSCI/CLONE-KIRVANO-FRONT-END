@@ -126,7 +126,7 @@ class _VendasStfState extends State<VendasStf> {
                       children: [
                         Icon(
                           Icons.shopping_cart,
-                          color: Colors.black,
+                          color: Colors.blue,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 8),
@@ -134,7 +134,7 @@ class _VendasStfState extends State<VendasStf> {
                             ' Vendas',
                             style: TextStyle(
                               fontSize: 15,
-                              color: Colors.black,
+                              color: Colors.blue,
                             ),
                           ),
                         ),

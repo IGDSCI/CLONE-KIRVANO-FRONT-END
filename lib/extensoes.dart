@@ -255,7 +255,7 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                       children: [
                         Icon(
                           Icons.extension,
-                          color: Colors.black,
+                          color: Colors.blue,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 8),
@@ -263,7 +263,7 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                             ' Extensões',
                             style: TextStyle(
                               fontSize: 15,
-                              color: Colors.black,
+                              color: Colors.blue,
                             ),
                           ),
                         ),

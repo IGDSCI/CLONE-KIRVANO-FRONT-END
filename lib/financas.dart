@@ -216,7 +216,7 @@ class _FinancasStfState extends State<FinancasStf> {
                       children: [
                         Icon(
                           Icons.attach_money,
-                          color: Colors.black,
+                          color: Colors.blue,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 8),
@@ -224,7 +224,7 @@ class _FinancasStfState extends State<FinancasStf> {
                             ' Finanças',
                             style: TextStyle(
                               fontSize: 15,
-                              color: Colors.black,
+                              color: Colors.blue,
                             ),
                           ),
                         ),

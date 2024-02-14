@@ -348,7 +348,7 @@ class _IndiqueEGanheStfState extends State<IndiqueEGanheStf> {
                       children: [
                         Icon(
                           Icons.people,
-                          color: Colors.black,
+                          color: Colors.blue,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 8),
@@ -356,7 +356,7 @@ class _IndiqueEGanheStfState extends State<IndiqueEGanheStf> {
                             ' Indique e ganhe',
                             style: TextStyle(
                               fontSize: 15,
-                              color: Colors.black,
+                              color: Colors.blue,
                             ),
                           ),
                         ),

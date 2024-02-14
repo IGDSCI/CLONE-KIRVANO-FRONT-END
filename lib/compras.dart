@@ -306,7 +306,7 @@ class _ComprasStfState extends State<ComprasStf> {
                       children: [
                         Icon(
                           Icons.shopping_bag,
-                          color: Colors.black,
+                          color: Colors.blue,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 8),
@@ -314,7 +314,7 @@ class _ComprasStfState extends State<ComprasStf> {
                             ' Compras',
                             style: TextStyle(
                               fontSize: 15,
-                              color: Colors.black,
+                              color: Colors.blue,
                             ),
                           ),
                         ),
