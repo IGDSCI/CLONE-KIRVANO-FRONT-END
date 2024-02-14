@@ -1,6 +1,6 @@
 # "Clone" do site Kirvano.com
 
-Desenvolvi este projeto pessoal com o objetivo de consolidar os conhecimentos adquiridos em videoaulas de Flutter. Inspirado no design do site da Kirvano, escolhei por replicá-lo devido à sua estética limpa, o que facilitou o desenvolvimento e aplicação prática dos meus conhecimentos.
+## Desenvolvi este projeto pessoal com o objetivo de consolidar os conhecimentos adquiridos em videoaulas de Flutter. Inspirado no design do site da Kirvano, escolhei por replicá-lo devido à sua estética limpa, o que facilitou o desenvolvimento e aplicação prática dos meus conhecimentos.
 
 # Imagens da aplicação:
 
