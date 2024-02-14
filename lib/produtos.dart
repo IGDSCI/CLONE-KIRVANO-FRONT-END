@@ -507,7 +507,7 @@ class _ProdutosStfState extends State<ProdutosStf> {
                     child: TextField(
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        labelText: 'Buscar',
+                        hintText: 'Buscar',
                         prefixIcon: Icon(Icons.search),
                       ),
                     ),

@@ -667,10 +667,9 @@ class _FinancasStfState extends State<FinancasStf> {
                                           height: 45,
                                           child: TextField(
                                             decoration: InputDecoration(
-                                              label: Text(
-                                                '0,00',
-                                                style: TextStyle(fontSize: 20),
-                                                ),
+                                              contentPadding: EdgeInsets.symmetric(vertical: 10.0),
+                                              hintText: '0,00',
+                                              hintStyle: TextStyle(fontSize: 20),
                                               border: OutlineInputBorder(),
                                               prefixIcon: Row(
                                                 mainAxisSize: MainAxisSize.min,

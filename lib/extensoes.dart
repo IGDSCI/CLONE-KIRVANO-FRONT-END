@@ -499,7 +499,9 @@ class _ExtensoesStfState extends State<ExtensoesStf> {
                           child: TextField(
                             decoration: InputDecoration(
                                 border: OutlineInputBorder(),
-                                label: Text('Buscar')),
+                                hintText: 'Buscar',
+                                prefixIcon: Icon(Icons.search)
+                                ),
                           )),
                     ),
                     Padding(
