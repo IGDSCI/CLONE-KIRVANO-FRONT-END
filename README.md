@@ -4,6 +4,8 @@
 
 # Imagens da aplicação:
 
+![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/9df1fab4-e757-4aec-b558-e57d41ba898b)
+
 ![image](https://github.com/IGDSCI/SIMULADOR-TELA-CADASTRO/assets/114839208/b0740306-5944-45ca-a4c6-affb1bb705aa)
 
 ![image](https://github.com/IGDSCI/SIMULADOR-TELA-CADASTRO/assets/114839208/9a2c5383-6b29-47a1-a9bf-0ab31db8f01b)
