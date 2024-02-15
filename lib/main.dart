@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:tela_cadastro/tela_cadastro.dart';
+import 'package:tela_cadastro/tela_inicial.dart';
 
 void main() {
-  runApp(TelaCadastroStl());
+  runApp(TelaInicialStl());
 }

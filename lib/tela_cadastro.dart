@@ -12,7 +12,6 @@ class TelaCadastroStl extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: TelaCadastroStf(),
-      initialRoute: '/telaInicial',
       routes: {
         '/login': (context) => LoginStl(),
         '/telaCadastro': (context) => TelaCadastroStl(),
