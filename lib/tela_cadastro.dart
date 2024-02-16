@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:tela_cadastro/configuracoes.dart';
-import 'package:tela_cadastro/dashboard.dart';
 import 'package:tela_cadastro/login.dart';
 import 'package:tela_cadastro/tela_inicial.dart';
 
