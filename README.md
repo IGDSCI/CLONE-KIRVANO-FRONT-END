@@ -4,7 +4,13 @@
 
 # Imagens da aplicação:
 
-![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/9df1fab4-e757-4aec-b558-e57d41ba898b)
+![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/a30a7056-367b-4e3d-8e5c-397ed719e931)
+
+![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/3955745f-9352-4db5-a51c-7956590b2ab5)
+
+![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/d5f92974-dcca-4718-aef9-fa6591ecd974)
+
+![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/5d705497-7ced-4dc2-985b-2de001e879d2)
 
 ![image](https://github.com/IGDSCI/SIMULADOR-TELA-CADASTRO/assets/114839208/b0740306-5944-45ca-a4c6-affb1bb705aa)
 
