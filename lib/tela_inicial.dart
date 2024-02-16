@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:tela_cadastro/login.dart';
 import 'package:tela_cadastro/tela_cadastro.dart';
+import 'package:accordion/accordion.dart';
 
 class TelaInicialStl extends StatelessWidget {
   const TelaInicialStl({super.key});
@@ -25,13 +26,18 @@ class TelaInicialStf extends StatefulWidget {
 }
 
 class _TelaInicialStfState extends State<TelaInicialStf> {
+
   String primeiroTitulo = 'Cadastro de conta';
-  String primeiroSubtitulo = 'Clique no botão Cadastre-se. Insira as informações\nsolicitadas e siga o fluxo de boas-vendas.';
+  String primeiroSubtitulo =
+      'Clique no botão Cadastre-se. Insira as informações\nsolicitadas e siga o fluxo de boas-vendas.';
   String segundoTitulo = 'Confirmação de e-mail';
-  String segundoSubtitulo = 'Acesse sua caixa de entrada e clique no link de\nconfirmação para validar seu cadastro.';
+  String segundoSubtitulo =
+      'Acesse sua caixa de entrada e clique no link de\nconfirmação para validar seu cadastro.';
   String terceiroTitulo = 'Informações complementares';
-  String terceiroSubtitulo = 'Complete seu perfil adicionando\ninformações complementares.';
-  String imgSegundaTela = 'https://cdn-icons-png.flaticon.com/512/3534/3534124.png';
+  String terceiroSubtitulo =
+      'Complete seu perfil adicionando\ninformações complementares.';
+  String imgSegundaTela =
+      'https://cdn-icons-png.flaticon.com/512/3534/3534124.png';
 
   void atualizarImg(String novoTexto) {
     setState(() {
@@ -79,7 +85,6 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        physics: AlwaysScrollableScrollPhysics(),
         child: Column(
           children: [
             Padding(
@@ -319,158 +324,607 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
             Container(
               width: double.infinity,
               height: 900,
-              color: Colors.grey,
-              child: Column(crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 50),
-                  child: Text(
-                      'Sua primeira venda no digital',
-                      style: TextStyle(fontSize: 48),
+              color: const Color.fromARGB(255, 199, 199, 199),
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 50),
+                      child: Text(
+                        'Sua primeira venda no digital',
+                        style: TextStyle(fontSize: 48),
                       ),
-                ),
-                
-                Text(
-                  'mais rápida do que você imagina',
-                  style: TextStyle(fontSize: 48),
-                  ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 160, left: 290),
-                  child: Row(mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Column(
+                    ),
+                    Text(
+                      'mais rápida do que você imagina',
+                      style: TextStyle(fontSize: 48),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(top: 160, left: 290),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          SizedBox(
-                            width: 300,
-                            height: 80,
-                            child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  padding: EdgeInsets.all(0),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(8.0))),
-                                onPressed: () {
-                                  atualizarTitulo1('Cadastro de conta');
-                                  atualizarSubtitulo1('Clique no botão Cadastre-se. Insira as informações\nsolicitadas e siga o fluxo de boas-vendas.');
-                                  atualizarTitulo2('Confirmação de e-mail');
-                                  atualizarSubtitulo2('Acesse sua caixa de entrada e clique no link de\nconfirmação para validar seu cadastro.');
-                                  atualizarTitulo3('Informações complementares');
-                                  atualizarSubtitulo3('Complete seu perfil adicionando\ninformações complementares.');
-                                  atualizarImg('https://cdn-icons-png.flaticon.com/512/3534/3534124.png');
-                                },
-                                child: Row(
-                                  children: [
-                                    Icon(
-                                      Icons.check_box_rounded,
-                                      color: Colors.blue,
-                                      ),
-                                    Text(
-                                      'Crie sua conta',
-                                      style: TextStyle(
-                                        color: Colors.grey,
-                                        fontSize: 22,
+                          Column(
+                            children: [
+                              SizedBox(
+                                width: 300,
+                                height: 80,
+                                child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        padding: EdgeInsets.all(0),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8.0))),
+                                    onPressed: () {
+                                      atualizarTitulo1('Cadastro de conta');
+                                      atualizarSubtitulo1(
+                                          'Clique no botão Cadastre-se. Insira as informações\nsolicitadas e siga o fluxo de boas-vendas.');
+                                      atualizarTitulo2('Confirmação de e-mail');
+                                      atualizarSubtitulo2(
+                                          'Acesse sua caixa de entrada e clique no link de\nconfirmação para validar seu cadastro.');
+                                      atualizarTitulo3(
+                                          'Informações complementares');
+                                      atualizarSubtitulo3(
+                                          'Complete seu perfil adicionando\ninformações complementares.');
+                                      atualizarImg(
+                                          'https://cdn-icons-png.flaticon.com/512/3534/3534124.png');
+                                    },
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.check_box_rounded,
+                                          color: Colors.blue,
                                         ),
-                                      )
-                                  ],
-                                )),
+                                        Text(
+                                          'Crie sua conta',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 22,
+                                          ),
+                                        )
+                                      ],
+                                    )),
+                              ),
+                              SizedBox(
+                                width: 300,
+                                height: 80,
+                                child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        padding: EdgeInsets.all(0),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8.0))),
+                                    onPressed: () {
+                                      atualizarTitulo1('Painel do produtor');
+                                      atualizarSubtitulo1(
+                                          'Uma vez logado e com os dados cadastrados, você já\npode criar um novo produto.');
+                                      atualizarTitulo2(
+                                          'Preencha as informações básicas');
+                                      atualizarSubtitulo2(
+                                          'Preencha as informações básicas sobre o seu produto,\ncomo o nome, descrição, categoria, e etc.');
+                                      atualizarTitulo3('');
+                                      atualizarSubtitulo3('');
+                                      atualizarImg(
+                                          'https://cdn-icons-png.flaticon.com/128/6372/6372367.png');
+                                    },
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.check_box_rounded,
+                                          color: Colors.blue,
+                                        ),
+                                        Text(
+                                          'Cadastre seu produto',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 22,
+                                          ),
+                                        )
+                                      ],
+                                    )),
+                              ),
+                              SizedBox(
+                                width: 300,
+                                height: 80,
+                                child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                        padding: EdgeInsets.all(0),
+                                        shape: RoundedRectangleBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(8.0))),
+                                    onPressed: () {
+                                      atualizarTitulo1('Link de vendas');
+                                      atualizarSubtitulo1(
+                                          'Agora você pode usar esse link gerado em suas\nestratégias de marketing, incorporando em sites, ou\nutilizando em campanhas de email marketing.');
+                                      atualizarTitulo2('');
+                                      atualizarSubtitulo2('');
+                                      atualizarTitulo3('');
+                                      atualizarSubtitulo3('');
+                                      atualizarImg(
+                                          'https://cdn-icons-png.flaticon.com/512/2660/2660366.png');
+                                    },
+                                    child: Row(
+                                      children: [
+                                        Icon(
+                                          Icons.check_box_rounded,
+                                          color: Colors.blue,
+                                        ),
+                                        Text(
+                                          'Comece a vender',
+                                          style: TextStyle(
+                                            color: Colors.black,
+                                            fontSize: 22,
+                                          ),
+                                        )
+                                      ],
+                                    )),
+                              )
+                            ],
                           ),
-                          SizedBox(
-                            width: 300,
-                            height: 80,
-                            child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  padding: EdgeInsets.all(0),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(8.0))),
-                                onPressed: () {
-                                  atualizarTitulo1('Painel do produtor');
-                                  atualizarSubtitulo1('Uma vez logado e com os dados cadastrados, você já\npode criar um novo produto.');
-                                  atualizarTitulo2('Preencha as informações básicas');
-                                  atualizarSubtitulo2('Preencha as informações básicas sobre o seu produto,\ncomo o nome, descrição, categoria, e etc.');
-                                  atualizarTitulo3('');
-                                  atualizarSubtitulo3('');
-                                  atualizarImg('https://cdn-icons-png.flaticon.com/128/6372/6372367.png');
-                                },
-                                child: Row(
-                                  children: [
-                                    Icon(
-                                      Icons.check_box_rounded,
-                                      color: Colors.blue,
-                                      ),
-                                    Text(
-                                      'Cadastre seu produto',
-                                      style: TextStyle(
-                                        color: Colors.grey,
-                                        fontSize: 22,
-                                        ),
-                                      )
-                                  ],
-                                )),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 140),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(bottom: 6),
+                                  child: Text(
+                                    primeiroTitulo,
+                                    style: TextStyle(fontSize: 22),
+                                  ),
+                                ),
+                                Text(
+                                  primeiroSubtitulo,
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(bottom: 6, top: 10),
+                                  child: Text(
+                                    segundoTitulo,
+                                    style: TextStyle(fontSize: 22),
+                                  ),
+                                ),
+                                Text(
+                                  segundoSubtitulo,
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(bottom: 6, top: 10),
+                                  child: Text(
+                                    terceiroTitulo,
+                                    style: TextStyle(fontSize: 22),
+                                  ),
+                                ),
+                                Text(
+                                  terceiroSubtitulo,
+                                  style: TextStyle(fontSize: 18),
+                                ),
+                              ],
+                            ),
                           ),
-                          SizedBox(
-                            width: 300,
-                            height: 80,
-                            child: ElevatedButton(
-                                style: ElevatedButton.styleFrom(
-                                  padding: EdgeInsets.all(0),
-                                    shape: RoundedRectangleBorder(
-                                        borderRadius:
-                                            BorderRadius.circular(8.0))),
-                                onPressed: () {
-                                  atualizarTitulo1('Link de vendas');
-                                  atualizarSubtitulo1('Agora você pode usar esse link gerado em suas\nestratégias de marketing, incorporando em sites, ou\nutilizando em campanhas de email marketing.');
-                                  atualizarTitulo2('');
-                                  atualizarSubtitulo2('');
-                                  atualizarTitulo3('');
-                                  atualizarSubtitulo3('');
-                                  atualizarImg('https://cdn-icons-png.flaticon.com/512/2660/2660366.png');
-                                },
-                                child: Row(
-                                  children: [
-                                    Icon(
-                                      Icons.check_box_rounded,
-                                      color: Colors.blue,
-                                      ),
-                                    Text(
-                                      'Comece a vender',
-                                      style: TextStyle(
-                                        color: Colors.grey,
-                                        fontSize: 22,
-                                        ),
-                                      )
-                                  ],
-                                )),
-                          )
+                          Padding(
+                            padding: const EdgeInsets.only(left: 140),
+                            child: Image.network(
+                              imgSegundaTela,
+                              width: 200,
+                            ),
+                          ),
                         ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 140),
-                        child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 6),
-                              child: Text(primeiroTitulo, style: TextStyle(fontSize: 22),),
+                    )
+                  ]),
+            ),
+            SizedBox(
+              width: double.infinity,
+              height: 900,
+              child: Column(children: [
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 50),
+                      child: Text(
+                        'Planos e taxas',
+                        style: TextStyle(fontSize: 48),
+                      ),
+                    ),
+                    Text(
+                      'Ofereça uma experiência verdadeiramente exclusiva e atraente para os seus',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                    Text(
+                      'membros através das nossas ferramentas de personalização.',
+                      style: TextStyle(fontSize: 20),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 290, top: 40),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 250,
+                        width: 660,
+                        decoration: BoxDecoration(
+                            color: Colors.black,
+                            border: Border.all(
+                              width: 1,
+                              color: const Color.fromARGB(255, 190, 188, 188),
                             ),
-                            Text(primeiroSubtitulo, style: TextStyle(fontSize: 18),),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 6, top: 10),
-                              child: Text(segundoTitulo, style: TextStyle(fontSize: 22),),
-                            ),
-                            Text(segundoSubtitulo, style: TextStyle(fontSize: 18),),
-                            Padding(
-                              padding: const EdgeInsets.only(bottom: 6, top: 10),
-                              child: Text(terceiroTitulo, style: TextStyle(fontSize: 22),),
-                            ),
-                            Text(terceiroSubtitulo, style: TextStyle(fontSize: 18),),
-                          ],
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(12))),
+                        child: Padding(
+                          padding: const EdgeInsets.all(18.0),
+                          child: Row(
+                            children: [
+                              Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'Padrão',
+                                      style: TextStyle(
+                                          fontSize: 22, color: Colors.white),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 20),
+                                      child: Text(
+                                        'Receba pagamentos de\nforma simples, com uma plataforma sem\ncustos ocultos.',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(top: 20),
+                                      child: SizedBox(
+                                        width: 350,
+                                        height: 50,
+                                        child: ElevatedButton(
+                                            style: ElevatedButton.styleFrom(
+                                                backgroundColor: Colors.blue,
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          8.0),
+                                                )),
+                                            onPressed: () {},
+                                            child: Text(
+                                              'Garantir taxa',
+                                              style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 18),
+                                            )),
+                                      ),
+                                    ),
+                                  ]),
+                              Padding(
+                                padding: const EdgeInsets.only(left: 40),
+                                child: Container(
+                                  height: 180,
+                                  width: 210,
+                                  decoration: BoxDecoration(
+                                    color:
+                                        const Color.fromARGB(255, 49, 49, 49),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(12)),
+                                  ),
+                                  child: Center(
+                                      child: Text(
+                                    '4,9% + R\$2,00',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 22),
+                                  )),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 140),
-                        child: Image.network(
-                          imgSegundaTela,
-                          width: 200,
+                        padding: const EdgeInsets.only(left: 40),
+                        child: Container(
+                          height: 250,
+                          width: 660,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(
+                                width: 1,
+                                color: const Color.fromARGB(255, 190, 188, 188),
+                              ),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(12))),
+                          child: Padding(
+                            padding: const EdgeInsets.all(18.0),
+                            child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Grandes contas',
+                                    style: TextStyle(
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 20),
+                                    child: Text(
+                                      'Se você tem uma operação diferenciada com volume de vendas acima\nde 100k por mês, podemos ajudá-lo com taxas personalizadas.',
+                                      style: TextStyle(fontSize: 18),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 20),
+                                    child: Text(
+                                      'Entre em contato com nossa equipe comercial.',
+                                      style: TextStyle(
+                                          fontSize: 20,
+                                          fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 20),
+                                    child: Row(
+                                      children: [
+                                        Icon(Icons.phone),
+                                        Text(
+                                          'Falar com um gerente',
+                                          style: TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.bold,
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                  )
+                                ]),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 290, top: 40),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 370,
+                        width: 410,
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            border: Border.all(
+                              width: 1,
+                              color: const Color.fromARGB(255, 190, 188, 188),
+                            ),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(12))),
+                        child: Padding(
+                          padding: const EdgeInsets.all(18.0),
+                          child: Column(children: [
+                            Padding(
+                              padding: const EdgeInsets.only(top: 15),
+                              child: Image.network(
+                                'https://cdn-icons-png.flaticon.com/512/2592/2592258.png',
+                                width: 90,
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 10),
+                              child: Text(
+                                'Segurança total',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                            Text(
+                              'e conformidade sem concessões',
+                              style: TextStyle(
+                                  fontSize: 18, fontWeight: FontWeight.bold),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 20),
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.check_box_outlined,
+                                    color: Colors.blue,
+                                  ),
+                                  Text(
+                                    'Segurança e criptografia de dados',
+                                    style: TextStyle(fontSize: 16),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 15),
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.check_box_outlined,
+                                    color: Colors.blue,
+                                  ),
+                                  Text(
+                                    'Certificado PCI DSS',
+                                    style: TextStyle(fontSize: 16),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(top: 15),
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.check_box_outlined,
+                                    color: Colors.blue,
+                                  ),
+                                  Text(
+                                    'Segurança para gerenciar suas contas e\npagamentos',
+                                    style: TextStyle(fontSize: 16),
+                                  ),
+                                ],
+                              ),
+                            )
+                          ]),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 65),
+                        child: Container(
+                          height: 370,
+                          width: 410,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(
+                                width: 1,
+                                color: const Color.fromARGB(255, 190, 188, 188),
+                              ),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(12))),
+                          child: Padding(
+                            padding: const EdgeInsets.all(18.0),
+                            child: Column(children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Image.network(
+                                  'https://cdn-icons-png.flaticon.com/512/5303/5303805.png',
+                                  width: 120,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: Text(
+                                  'Saque enviado para sua conta bancária',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              Text(
+                                'em minutos',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 20),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      Icons.check_box_outlined,
+                                      color: Colors.blue,
+                                    ),
+                                    Text(
+                                      'Escolha quando você quer receber',
+                                      style: TextStyle(fontSize: 16),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      Icons.check_box_outlined,
+                                      color: Colors.blue,
+                                    ),
+                                    Text(
+                                      'Antecipação automatizada',
+                                      style: TextStyle(fontSize: 16),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ]),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 65),
+                        child: Container(
+                          height: 370,
+                          width: 410,
+                          decoration: BoxDecoration(
+                              color: Colors.white,
+                              border: Border.all(
+                                width: 1,
+                                color: const Color.fromARGB(255, 190, 188, 188),
+                              ),
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(12))),
+                          child: Padding(
+                            padding: const EdgeInsets.all(18.0),
+                            child: Column(children: [
+                              Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Image.network(
+                                  'https://cdn-icons-png.flaticon.com/512/4564/4564998.png',
+                                  width: 120,
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 10),
+                                child: Text(
+                                  'Métodos de pagamentos aceitos',
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              Text(
+                                'em minutos',
+                                style: TextStyle(
+                                    fontSize: 18, fontWeight: FontWeight.bold),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 20),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      Icons.check_box_outlined,
+                                      color: Colors.blue,
+                                    ),
+                                    Text(
+                                      'Cartão de crédito',
+                                      style: TextStyle(fontSize: 16),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      Icons.check_box_outlined,
+                                      color: Colors.blue,
+                                    ),
+                                    Text(
+                                      'PIX',
+                                      style: TextStyle(fontSize: 16),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.only(top: 15),
+                                child: Row(
+                                  children: [
+                                    Icon(
+                                      Icons.check_box_outlined,
+                                      color: Colors.blue,
+                                    ),
+                                    Text(
+                                      'Boleto',
+                                      style: TextStyle(fontSize: 16),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ]),
+                          ),
                         ),
                       ),
                     ],
@@ -479,399 +933,177 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
               ]),
             ),
 
-            SizedBox(
-              width: double.infinity, 
-              height: 900,
-              child: Column(
+            Container(
+              width: double.infinity,
+              height: 700,
+              color: const Color.fromARGB(255, 199, 199, 199),
+              child: Row(
                 children: [
-                Column(children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 50),
-                    child: Text(
-                      'Planos e taxas',
-                      style: TextStyle(fontSize: 48),
-                    ),
-                  ),
-
-                  Text(
-                    'Ofereça uma experiência verdadeiramente exclusiva e atraente para os seus',
-                    style: TextStyle(fontSize: 20),
-                    ),
-
-                  Text(
-                    'membros através das nossas ferramentas de personalização.',
-                    style: TextStyle(fontSize: 20),
-                    ),
-                ],),
-
                 Padding(
-                  padding: const EdgeInsets.only(left: 290, top: 40),
-                  child: Row(children: [
-                    Container(
-                      height: 250,
-                      width: 660,
-                      decoration: BoxDecoration(
-                        color: Colors.black,
-                          border: Border.all(
-                            width: 1,
-                            color: const Color.fromARGB(255, 190, 188, 188),
+                  padding: const EdgeInsets.only(left: 290),
+                  child: SizedBox(
+                    height: 400,
+                    child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                      Text(
+                        'Dúvidas\nfrequentes',
+                        style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),
+                        ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 15),
+                        child: Text(
+                          'Caso não encontre sua dúvida aqui,\nacesse nossa central de ajuda ao cliente.',
+                          style: TextStyle(fontSize: 22),
                           ),
-                          borderRadius: BorderRadius.all(Radius.circular(12))),
-                      child: Padding(
-                        padding: const EdgeInsets.all(18.0),
-                        child: Row(
-                          children: [
-                            Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Padrão',
-                                    style: TextStyle(fontSize: 22, color: Colors.white),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 20),
-                                    child: Text(
-                                      'Receba pagamentos de\nforma simples, com uma plataforma sem\ncustos ocultos.',
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 20),
-                                    child: SizedBox(
-                                      width: 350,
-                                      height: 50,
-                                      child: ElevatedButton(
-                                        style: ElevatedButton.styleFrom(
-                                          backgroundColor: Colors.blue,
-                                          shape: RoundedRectangleBorder(
-                                           borderRadius: BorderRadius.circular(8.0),
-                                          )
-                                        ),
-                                        onPressed: (){}, 
-                                        child: Text(
-                                          'Garantir taxa',
-                                          style: TextStyle(color: Colors.white, fontSize: 18),
-                                          )
-                                          ),
-                                    ),
-                                  ),
-                                ]),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 40),
-                                  child: Container(
-                                  height: 180, 
-                                  width: 210,
-                                  decoration: BoxDecoration(
-                                    color: const Color.fromARGB(255, 49, 49, 49),
-                                    borderRadius: BorderRadius.all(Radius.circular(12)),
-                                  ),
-                                  child: Center(child: Text(
-                                    '4,9% + R\$2,00',
-                                    style: TextStyle(color: Colors.white, fontSize: 22),
-                                    )),
-                                  ),
-                                )
-                          ],
-                        ),
                       ),
-                    ),
-
-                    Padding(
-                      padding: const EdgeInsets.only(left: 40),
-                      child: Container(
-                        height: 250,
-                        width: 660,
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                            border: Border.all(
-                              width: 1,
-                              color: const Color.fromARGB(255, 190, 188, 188),
-                            ),
-                            borderRadius: BorderRadius.all(Radius.circular(12)
+                      Padding(
+                        padding: const EdgeInsets.only(top: 15),
+                        child: SizedBox(
+                          width: 250,
+                          height: 70,
+                          child: ElevatedButton(style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.all(Radius.circular(8)
+                              )
                             )
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(18.0),
-                          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
+                            ),
+                              onPressed: (){}, 
+                              child: Row(children: [
                             Text(
-                              'Grandes contas',
-                              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                              'Central de ajuda',
+                              style: TextStyle(color: Colors.white, fontSize: 20),
                               ),
                             
                             Padding(
-                              padding: const EdgeInsets.only(top: 20),
-                              child: Text(
-                                'Se você tem uma operação diferenciada com volume de vendas acima\nde 100k por mês, podemos ajudá-lo com taxas personalizadas.',
-                                style: TextStyle(fontSize: 18),
-                                ),
-                            ),
-                          
-                            Padding(
-                              padding: const EdgeInsets.only(top: 20),
-                              child: Text(
-                                'Entre em contato com nossa equipe comercial.',
-                                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                                ),
-                            ),
-                            
-                            Padding(
-                              padding: const EdgeInsets.only(top: 20),
-                              child: Row(children: [
-                                Icon(Icons.phone),
-                                Text(
-                                  'Falar com um gerente',
-                                  style: TextStyle(fontSize: 18,  fontWeight: FontWeight.bold,),
-                                  )
-                              ],),
-                            )
-                          ]),
-                        ),
-                      ),
-                    )
-                  ],),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 290, top: 40),
-                  child: Row(
-                    children: [
-                      Container(
-                            height: 370,
-                            width: 410,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                                border: Border.all(
-                                  width: 1,
-                                  color: const Color.fromARGB(255, 190, 188, 188),
-                                ),
-                                borderRadius: BorderRadius.all(Radius.circular(12))),
-                        child: Padding(
-                          padding: const EdgeInsets.all(18.0),
-                          child: Column(children: [
-                            Padding(
-                              padding: const EdgeInsets.only(top: 15),
-                              child: Image.network('https://cdn-icons-png.flaticon.com/512/2592/2592258.png', width: 90,),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 10),
-                              child: Text(
-                                'Segurança total',
-                                style: TextStyle(
-                                  fontSize: 18, 
-                                  fontWeight: FontWeight.bold
-                                  ),
-                                ),
-                            ),
-                            Text('e conformidade sem concessões',
-                            style: TextStyle(
-                              fontSize: 18, 
-                              fontWeight: FontWeight.bold
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(top: 20),
-                              child: Row(children: [
-                                Icon(
-                                  Icons.check_box_outlined,
-                                  color: Colors.blue,
-                                  ),
-                                Text(
-                                  'Segurança e criptografia de dados',
-                                  style: TextStyle(fontSize: 16),
-                                  ),
-                              ],),
-                            ),
-                          
-                            Padding(
-                              padding: const EdgeInsets.only(top: 15),
-                              child: Row(children: [
-                                Icon(
-                                  Icons.check_box_outlined,
-                                  color: Colors.blue,
-                                  ),
-                                Text(
-                                  'Certificado PCI DSS',
-                                  style: TextStyle(fontSize: 16),
-                                  ),
-                              ],),
-                            ),
-                          
-                            Padding(
-                              padding: const EdgeInsets.only(top: 15),
-                              child: Row(children: [
-                                Icon(
-                                  Icons.check_box_outlined,
-                                  color: Colors.blue,
-                                  ),
-                                Text(
-                                  'Segurança para gerenciar suas contas e\npagamentos',
-                                  style: TextStyle(fontSize: 16),
-                                  ),
-                              ],),
-                            )
-                          ]),
-                        ),
-                      ),
-
-                      Padding(
-                        padding: const EdgeInsets.only(left: 65),
-                        child: Container(
-                              height: 370,
-                              width: 410,
-                              decoration: BoxDecoration(
+                              padding: const EdgeInsets.only(left: 10),
+                              child: Icon(
+                                Icons.help_outline,
                                 color: Colors.white,
-                                  border: Border.all(
-                                    width: 1,
-                                    color: const Color.fromARGB(255, 190, 188, 188),
-                                  ),
-                                  borderRadius: BorderRadius.all(Radius.circular(12))),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(18.0),
-                                    child: Column(children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 15),
-                                        child: Image.network('https://cdn-icons-png.flaticon.com/512/5303/5303805.png', width: 120,),
-                                      ),
-                                                            
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 10),
-                                        child: Text(
-                                          'Saque enviado para sua conta bancária',
-                                          style: TextStyle(
-                                            fontSize: 18, 
-                                            fontWeight: FontWeight.bold
-                                          ),
-                                        ),
-                                      ),
-                                      Text(
-                                        'em minutos',
-                                        style: TextStyle(
-                                          fontSize: 18, 
-                                          fontWeight: FontWeight.bold
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 20),
-                                        child: Row(children: [
-                                          Icon(
-                                            Icons.check_box_outlined,
-                                            color: Colors.blue,
-                                          ),
-                                          Text(
-                                            'Escolha quando você quer receber',
-                                            style: TextStyle(fontSize: 16),
-                                          ),
-                                        ],),
-                                      ),
-                                                            
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 15),
-                                        child: Row(children: [
-                                          Icon(
-                                            Icons.check_box_outlined,
-                                            color: Colors.blue,
-                                          ),
-                                          Text(
-                                            'Antecipação automatizada',
-                                            style: TextStyle(fontSize: 16),
-                                          ),
-                                        ],),
-                                      ),
-                                    ]),
-                                  ),
+                                ),
+                            ),
+                          ],)),
                         ),
-                      ),
-
-                      Padding(
-                        padding: const EdgeInsets.only(left: 65),
-                        child: Container(
-                              height: 370,
-                              width: 410,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                  border: Border.all(
-                                    width: 1,
-                                    color: const Color.fromARGB(255, 190, 188, 188),
-                                  ),
-                                  borderRadius: BorderRadius.all(Radius.circular(12))),
-                                  child: Padding(
-                                    padding: const EdgeInsets.all(18.0),
-                                    child: Column(children: [
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 15),
-                                        child: Image.network('https://cdn-icons-png.flaticon.com/512/4564/4564998.png', width: 120,),
-                                      ),
-                                                            
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 10),
-                                        child: Text(
-                                          'Métodos de pagamentos aceitos',
-                                          style: TextStyle(
-                                            fontSize: 18, 
-                                            fontWeight: FontWeight.bold
-                                          ),
-                                        ),
-                                      ),
-                                      Text(
-                                        'em minutos',
-                                        style: TextStyle(
-                                          fontSize: 18, 
-                                          fontWeight: FontWeight.bold
-                                        ),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 20),
-                                        child: Row(children: [
-                                          Icon(
-                                            Icons.check_box_outlined,
-                                            color: Colors.blue,
-                                          ),
-                                          Text(
-                                            'Cartão de crédito',
-                                            style: TextStyle(fontSize: 16),
-                                          ),
-                                        ],),
-                                      ),
-                                                            
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 15),
-                                        child: Row(children: [
-                                          Icon(
-                                            Icons.check_box_outlined,
-                                            color: Colors.blue,
-                                          ),
-                                          Text(
-                                            'PIX',
-                                            style: TextStyle(fontSize: 16),
-                                          ),
-                                        ],),
-                                      ),
-                                                            
-                                      Padding(
-                                        padding: const EdgeInsets.only(top: 15),
-                                        child: Row(children: [
-                                          Icon(
-                                            Icons.check_box_outlined,
-                                            color: Colors.blue,
-                                          ),
-                                          Text(
-                                            'Boleto',
-                                            style: TextStyle(fontSize: 16),
-                                          ),
-                                        ],),
-                                      ),
-                                                                  ]),
-                                  ),
-                        ),
-                      ),
-                    ],
+                      )
+                    ],),
                   ),
-                )
+                ),
+
+                Padding(
+                  padding: const EdgeInsets.only(left: 120),
+                  child: SizedBox(
+                    child: Column(mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: 800,
+                          child: Accordion(paddingBetweenClosedSections: 0,children: [
+                            AccordionSection(
+                              paddingBetweenClosedSections: 0,
+                              paddingBetweenOpenSections: 0,
+                              headerPadding: EdgeInsets.all(0),
+                              headerBackgroundColor: Colors.white,
+                              contentBackgroundColor: Colors.white,
+                              headerBorderColor: Colors.white,
+                              contentBorderColor: Colors.white,
+                              isOpen: false,
+                              contentVerticalPadding: 10,
+                              contentHorizontalPadding: 0,
+                              rightIcon: Icon(Icons.keyboard_arrow_up_sharp),
+                              header: const Text('01 Existe alguma cobrança para criar uma conta na Kirvano?', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                              content: const Text('A Kirvano é uma plataforma gratuita para montar seu negócio digital. Você não paga nada para começar, apenas uma porcentagem sobre as vendas.', style: TextStyle(fontSize: 18)),
+                            ),
+                          ]),
+                        ),
+                    
+                        SizedBox(
+                          width: 800,
+                          child: Accordion(paddingListTop: 0,children: [
+                          AccordionSection(
+                            paddingBetweenClosedSections: 0,
+                            paddingBetweenOpenSections: 0,
+                            headerPadding: EdgeInsets.all(0),
+                            headerBackgroundColor: Colors.white,
+                            contentBackgroundColor: Colors.white,
+                            headerBorderColor: Colors.white,
+                            contentBorderColor: Colors.white,
+                            isOpen: false,
+                            contentVerticalPadding: 10,
+                            contentHorizontalPadding: 0,
+                            rightIcon: Icon(Icons.keyboard_arrow_up_sharp),
+                            header: const Text('02 Vendo um produto físico, posso usar a Kirvano?', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                            content: const Text('A plataforma é exclusiva para produtos e serviços digitais.', style: TextStyle(fontSize: 18)),
+                          ),
+                        ]),
+                      ),
+                    
+                      SizedBox(
+                        width: 800,
+                        child: Accordion(paddingListTop: 0,children: [
+                          AccordionSection(
+                            paddingBetweenClosedSections: 0,
+                            paddingBetweenOpenSections: 0,
+                            headerPadding: EdgeInsets.all(0),
+                            headerBackgroundColor: Colors.white,
+                            contentBackgroundColor: Colors.white,
+                            headerBorderColor: Colors.white,
+                            contentBorderColor: Colors.white,
+                            isOpen: false,
+                            contentVerticalPadding: 10,
+                            contentHorizontalPadding: 0,
+                            rightIcon: Icon(Icons.keyboard_arrow_up_sharp),
+                            header: const Text('03 Para quem é a Kirvano?', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                            content: const Text('A Kirvano é uma plataforma completa para quem é produtor digital, afiliado ou para quem vende serviços on-line (telemedicina, closefriends, SaaS e etc).', style: TextStyle(fontSize: 18)),
+                          ),
+                        ]),
+                      ),
+                    
+                      SizedBox(
+                        width: 800,
+                        child: Accordion(paddingListTop: 0,children: [
+                          AccordionSection(
+                            paddingBetweenClosedSections: 0,
+                            paddingBetweenOpenSections: 0,
+                            headerPadding: EdgeInsets.all(0),
+                            headerBackgroundColor: Colors.white,
+                            contentBackgroundColor: Colors.white,
+                            headerBorderColor: Colors.white,
+                            contentBorderColor: Colors.white,
+                            isOpen: false,
+                            contentVerticalPadding: 10,
+                            contentHorizontalPadding: 0,
+                            rightIcon: Icon(Icons.keyboard_arrow_up_sharp),
+                            header: const Text('04 Quantos produtos posso vender pela Kirvano?', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                            content: const Text('Não há limite para o número de produtos digitais que você pode criar e vender na Kirvano.', style: TextStyle(fontSize: 18)),
+                            ),
+                        ]),
+                      ),
+                    
+                      SizedBox(
+                        width: 800,
+                        child: Accordion(paddingListTop: 0,children: [
+                          AccordionSection(
+                            paddingBetweenClosedSections: 0,
+                            paddingBetweenOpenSections: 0,
+                            headerPadding: EdgeInsets.all(0),
+                            headerBackgroundColor: Colors.white,
+                            contentBackgroundColor: Colors.white,
+                            headerBorderColor: Colors.white,
+                            contentBorderColor: Colors.white,
+                            isOpen: false,
+                            contentVerticalPadding: 10,
+                            contentHorizontalPadding: 0,
+                            rightIcon: Icon(Icons.keyboard_arrow_up_sharp),
+                            header: const Text('05 Qual a taxa para vendas realizadas?', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                            content: const Text('A Kirvano oferece a menor taxa do mercado para infoprodutores: 4,9% + R\$2,00 por venda aprovada.', style: TextStyle(fontSize: 18)),
+                          ),
+                        ]),
+                      ),
+                      ],
+                    ),
+                  ),
+                ),
               ]),
-            )
+              ),
           ],
         ),
       ),
