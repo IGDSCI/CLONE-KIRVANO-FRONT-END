@@ -4,13 +4,15 @@
 
 # Imagens da aplicação:
 
-![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/a30a7056-367b-4e3d-8e5c-397ed719e931)
+![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/edccfc81-1644-443d-8f16-4b0d1467cc64)
 
-![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/3955745f-9352-4db5-a51c-7956590b2ab5)
+![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/6e4c3761-7892-464f-95a0-cdf69739ebf3)
 
-![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/d5f92974-dcca-4718-aef9-fa6591ecd974)
+![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/83eaf62d-dcc9-4162-8735-7390790f14ef)
 
-![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/5d705497-7ced-4dc2-985b-2de001e879d2)
+![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/a48b6ce0-890a-413c-9242-90d1830de64b)
+
+![image](https://github.com/IGDSCI/CLONE-KIRVANO-FRONT-END/assets/114839208/9c062d02-f0e8-4698-bae1-a2569d8a0099)
 
 ![image](https://github.com/IGDSCI/SIMULADOR-TELA-CADASTRO/assets/114839208/b0740306-5944-45ca-a4c6-affb1bb705aa)
 
