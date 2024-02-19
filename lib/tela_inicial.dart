@@ -220,10 +220,45 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                                 ),
 
                                 Padding(
-                                  padding: const EdgeInsets.only(top: 15),
+                                  padding: const EdgeInsets.only(top: 15, bottom: 45),
                                   child: Text(
                                     'Receba os pagamentos das vendas de seus produtos e serviços digitais\ncomo e-books, cursos online e mentorias — com a menor taxa do mercado.',
                                     style: TextStyle(fontSize: 20),
+                                  ),
+                                ),
+
+                                SizedBox(
+                                  width: 250,
+                                  height: 70,
+                                  child: ElevatedButton(
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: Colors.blue,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(8.0),
+                                      ),
+                                    ),
+                                    onPressed: () {
+                                      Navigator.of(context).pushReplacementNamed('/telaCadastro');
+                                    },
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          'Cadastre-se agora',
+                                          style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                          ),
+                                        ),
+
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 10),
+                                          child: Icon(
+                                            Icons.arrow_circle_right_outlined,
+                                            color: Colors.white,
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ],
@@ -237,41 +272,6 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                               ),
                             )
                           ],
-                        ),
-                      ),
-                      
-                      SizedBox(
-                        width: 250,
-                        height: 70,
-                        child: ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue,
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                          ),
-                          onPressed: () {
-                            Navigator.of(context).pushReplacementNamed('/telaCadastro');
-                          },
-                          child: Row(
-                            children: [
-                              Text(
-                                'Cadastre-se agora',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                ),
-                              ),
-
-                              Padding(
-                                padding: const EdgeInsets.only(left: 10),
-                                child: Icon(
-                                  Icons.arrow_circle_right_outlined,
-                                  color: Colors.white,
-                                ),
-                              )
-                            ],
-                          ),
                         ),
                       ),
                     ]),
@@ -310,9 +310,8 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                                 height: 80,
                                 child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                        padding: EdgeInsets.all(0),
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(8.0))),
+                                      padding: EdgeInsets.all(0),
+                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0))),
                                     onPressed: () {
                                       atualizarTitulo1('Cadastro de conta');
                                       atualizarSubtitulo1('Clique no botão Cadastre-se. Insira as informações\nsolicitadas e siga o fluxo de boas-vendas.');
@@ -346,9 +345,8 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                                 height: 80,
                                 child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                        padding: EdgeInsets.all(0),
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(8.0))),
+                                      padding: EdgeInsets.all(0),
+                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0))),
                                     onPressed: () {
                                       atualizarTitulo1('Painel do produtor');
                                       atualizarSubtitulo1('Uma vez logado e com os dados cadastrados, você já\npode criar um novo produto.');
@@ -382,9 +380,8 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                                 height: 80,
                                 child: ElevatedButton(
                                     style: ElevatedButton.styleFrom(
-                                        padding: EdgeInsets.all(0),
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.circular(8.0))),
+                                      padding: EdgeInsets.all(0),
+                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0))),
                                     onPressed: () {
                                       atualizarTitulo1('Link de vendas');
                                       atualizarSubtitulo1('Agora você pode usar esse link gerado em suas\nestratégias de marketing, incorporando em sites, ou\nutilizando em campanhas de email marketing.');
@@ -414,6 +411,7 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                               )
                             ],
                           ),
+
                           Padding(
                             padding: const EdgeInsets.only(left: 140),
                             child: Column(
@@ -460,6 +458,7 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                               ],
                             ),
                           ),
+
                           Padding(
                             padding: const EdgeInsets.only(left: 140),
                             child: Image.network(
@@ -523,7 +522,9 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                                     Text(
                                       'Padrão',
                                       style: TextStyle(
-                                          fontSize: 22, color: Colors.white),
+                                          fontSize: 22, 
+                                          color: Colors.white,
+                                          ),
                                     ),
 
                                     Padding(
@@ -545,15 +546,15 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                                         child: ElevatedButton(
                                             style: ElevatedButton.styleFrom(
                                                 backgroundColor: Colors.blue,
-                                                shape: RoundedRectangleBorder(
-                                                  borderRadius:BorderRadius.circular(8.0),
+                                                shape: RoundedRectangleBorder(borderRadius:BorderRadius.circular(8.0),
                                                 )),
                                             onPressed: () {},
                                             child: Text(
                                               'Garantir taxa',
                                               style: TextStyle(
                                                   color: Colors.white,
-                                                  fontSize: 18),
+                                                  fontSize: 18,
+                                                  ),
                                             )),
                                       ),
                                     ),
@@ -572,7 +573,9 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                                       child: Text(
                                     '4,9% + R\$2,00',
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 22),
+                                        color: Colors.white, 
+                                        fontSize: 22,
+                                        ),
                                   )),
                                 ),
                               )
@@ -602,7 +605,8 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                                     'Grandes contas',
                                     style: TextStyle(
                                         fontSize: 22,
-                                        fontWeight: FontWeight.bold),
+                                        fontWeight: FontWeight.bold,
+                                        ),
                                   ),
 
                                   Padding(
@@ -676,14 +680,18 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                               child: Text(
                                 'Segurança total',
                                 style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.bold),
+                                    fontSize: 18, 
+                                    fontWeight: FontWeight.bold,
+                                    ),
                               ),
                             ),
 
                             Text(
                               'e conformidade sem concessões',
                               style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.bold),
+                                  fontSize: 18, 
+                                  fontWeight: FontWeight.bold,
+                                  ),
                             ),
 
                             Padding(
@@ -710,6 +718,7 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                                     Icons.check_box_outlined,
                                     color: Colors.blue,
                                   ),
+
                                   Text(
                                     'Certificado PCI DSS',
                                     style: TextStyle(fontSize: 16),
@@ -726,6 +735,7 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                                     Icons.check_box_outlined,
                                     color: Colors.blue,
                                   ),
+
                                   Text(
                                     'Segurança para gerenciar suas contas e\npagamentos',
                                     style: TextStyle(fontSize: 16),
@@ -766,14 +776,17 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                                   'Saque enviado para sua conta bancária',
                                   style: TextStyle(
                                       fontSize: 18,
-                                      fontWeight: FontWeight.bold),
+                                      fontWeight: FontWeight.bold,
+                                      ),
                                 ),
                               ),
 
                               Text(
                                 'em minutos',
                                 style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.bold),
+                                    fontSize: 18, 
+                                    fontWeight: FontWeight.bold,
+                                    ),
                               ),
 
                               Padding(
@@ -842,14 +855,17 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                                   'Métodos de pagamentos aceitos',
                                   style: TextStyle(
                                       fontSize: 18,
-                                      fontWeight: FontWeight.bold),
+                                      fontWeight: FontWeight.bold,
+                                      ),
                                 ),
                               ),
 
                               Text(
                                 'em minutos',
                                 style: TextStyle(
-                                    fontSize: 18, fontWeight: FontWeight.bold),
+                                    fontSize: 18, 
+                                    fontWeight: FontWeight.bold,
+                                    ),
                               ),
 
                               Padding(
@@ -926,7 +942,9 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                         Text(
                           'Dúvidas\nfrequentes',
                           style: TextStyle(
-                              fontSize: 48, fontWeight: FontWeight.bold),
+                              fontSize: 48, 
+                              fontWeight: FontWeight.bold,
+                              ),
                         ),
 
                         Padding(
@@ -953,7 +971,9 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                                     Text(
                                       'Central de ajuda',
                                       style: TextStyle(
-                                          color: Colors.white, fontSize: 20),
+                                          color: Colors.white, 
+                                          fontSize: 20,
+                                          ),
                                     ),
 
                                     Padding(
@@ -994,8 +1014,7 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                                   isOpen: false,
                                   contentVerticalPadding: 10,
                                   contentHorizontalPadding: 0,
-                                  rightIcon:
-                                      Icon(Icons.keyboard_arrow_up_sharp),
+                                  rightIcon: Icon(Icons.keyboard_arrow_up_sharp),
                                   header: const Text(
                                       '01 Existe alguma cobrança para criar uma conta na Kirvano?',
                                       style: TextStyle(
@@ -1050,7 +1069,8 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                               contentVerticalPadding: 10,
                               contentHorizontalPadding: 0,
                               rightIcon: Icon(Icons.keyboard_arrow_up_sharp),
-                              header: const Text('03 Para quem é a Kirvano?',
+                              header: const Text(
+                                '03 Para quem é a Kirvano?',
                                   style: TextStyle(
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold)),
@@ -1286,13 +1306,16 @@ class _TelaInicialStfState extends State<TelaInicialStf> {
                             style: TextStyle(color: Colors.white, fontSize: 16),
                           ),
                         ),
+
                         Image.network(
                           'https://miro.medium.com/v2/resize:fit:817/0*prx_syr8n4OIGwUp.png',
                           width: 200,
                         ),
+
                         SizedBox(
                           height: 20,
                         ),
+                        
                         Image.network(
                           'https://www.extra-imagens.com.br/criacao/03-hotsite/2021/03-mar/app/images/btn-apple.png',
                           width: 200,
